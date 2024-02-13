@@ -1,0 +1,576 @@
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* shopFirstArea
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.shopFirstArea {
+  padding-top: 25px;
+  padding-bottom: 524px;
+  background: url(../img/shop/bg_first.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 369px;
+    margin: auto;
+    background: url(../img/shop/bg_first-opacity.svg) no-repeat center center/100% 100%;
+    content: '';
+  }
+  .l-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+}
+.shopFirst__ttl {
+  margin-bottom: 29px;
+  font-size: 42px;
+  font-weight: 600;
+  text-align: center;
+
+  .strong {
+    position: relative;
+
+    .yomi {
+      position: absolute;
+      top: -25px;
+      left: 22px;
+      font-size: 12px;
+      letter-spacing: 0.9em;
+      white-space: nowrap;
+    }
+  }
+}
+.shopFirst__lead {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.875;
+}
+
+@include sp {
+  .shopFirstArea {
+    padding-top: 15px;
+    padding-bottom: 76vw;
+    background-image: url(../img/shop/bg_first-sp.jpg);
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 369px;
+    }
+    .l-content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .shopFirst__ttl {
+    margin-bottom: 22px;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+
+    .strong {
+      position: relative;
+
+      .yomi {
+        position: absolute;
+        top: -22px;
+        left: 5px;
+        font-size: 10px;
+        letter-spacing: 0.6em;
+      }
+    }
+  }
+  .shopFirst__lead {
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* shopStaffArea
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.shopStaffArea {
+  padding-top: 120px;
+  padding-bottom: 0;
+
+  .c-ttl01 {
+    margin-bottom: 30px;
+  }
+}
+.shopStaff__imgBox {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  aspect-ratio: 910/430;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.shopStaff__contBox {
+  width: 425px;
+  margin-top: -105px;
+  margin-left: auto;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  padding: 37px 0px 32px 42px;
+  border-radius: 20px 0 0 0 ;
+}
+.shopStaff__txt {
+  font-size: 16px;
+  line-height: 1.75;
+}
+.shopStaff__link {
+  margin-top: 33px;
+}
+
+@include sp {
+  .shopStaffArea {
+    padding-top: 50px;
+    padding-bottom: 0;
+
+    .c-ttl01 {
+      margin-bottom: 20px;
+    }
+  }
+  .shopStaff__imgBox {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    aspect-ratio: 910/530;
+
+    img {
+
+    }
+  }
+  .shopStaff__contBox {
+    width: auto;
+    margin-top: 0;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+    padding: 37px 0px 0;
+    border-radius: 0 0 0 0 ;
+  }
+  .shopStaff__txt {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+  .shopStaff__link {
+    margin-top: 33px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* shopBoatArea
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.shopBoatArea {
+  padding-top: 68px;
+
+  .c-ttl01 {
+    margin-bottom: 30px;
+  }
+}
+.shopBoat__imgBox {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  aspect-ratio: 910/450;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.shopBoat__contBox {
+  display: flex;
+}
+.shopBoat__ttlBox {
+  flex:1 1 425px;
+  margin-top: -105px;
+  margin-right: auto;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  padding: 36px 40px 32px 0;
+  border-radius: 0 20px 0 0 ;
+}
+.shopBoat__nameBox {
+
+  .name {
+    margin-bottom: 11px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .subTxt {
+    width: fit-content;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    padding: 2px 15px;
+    border-radius: 30px;
+    border: solid 1px #001C10;
+  }
+}
+.shopBoat__txtBox {
+  flex: 1 1 498px;
+  padding-top: 47px;
+  margin-left: -13px;
+  position: relative;
+  z-index: 2;
+}
+.shopBoat__txt {
+  font-size: 14px;
+  line-height: 1.71;
+}
+.shopBoat__note {
+  margin-top: 33px;
+  font-size: 12px;
+  color: #8D8D8D;
+}
+.shopBoatList {
+  display: flex;
+  gap: 0 cl(20, 29);
+  margin-top: 50px;
+}
+.shopBoatList__item {
+  width: calc((100% - (cl(20, 29) * 2)) / 3);
+}
+.shopBoatList__imgBox {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+.shopBoatList__txt {
+  margin-top: 16px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+@include sp {
+  .shopBoatArea {
+    padding-top: 68px;
+    padding-bottom: 30px;
+
+    .c-ttl01 {
+      margin-bottom: 20px;
+    }
+  }
+  .shopBoat__imgBox {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    aspect-ratio: 910/550;
+    width: 100%;
+
+    img {
+
+    }
+  }
+  .shopBoat__contBox {
+    display: block;
+  }
+  .shopBoat__ttlBox {
+    margin-top: 0;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    padding: 36px 0 0 ;
+    border-radius: 0 0 0 0 ;
+  }
+  .shopBoat__nameBox {
+
+    .name {
+      margin-bottom: 8px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .subTxt {
+      width: fit-content;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      padding: 2px 15px;
+      border-radius: 30px;
+    }
+  }
+  .shopBoat__txtBox {
+    padding-top: 30px;
+    margin-left: 0;
+    position: relative;
+    z-index: 2;
+  }
+  .shopBoat__txt {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  .shopBoat__note {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  .shopBoatList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px cl(20, 29);
+    margin-top: 40px;
+  }
+  .shopBoatList__item {
+    width: calc((100% - (cl(20, 29) * 1)) / 2);
+  }
+  .shopBoatList__imgBox {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+  }
+  .shopBoatList__txt {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* shopSafetyArea
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.shopSafetyArea {
+  padding-top: 48px;
+  padding-bottom: 47px;
+
+  .c-ttl01 {
+    margin-bottom: 40px;
+  }
+}
+.shopSafetyList {
+  display: flex;
+  gap: 0 16px;
+}
+.shopSafetyList__item {
+  width: calc((100% - (16px * 2)) / 3);
+  background-color: #fff;
+  padding: 20px 20px 32px;
+  border-radius: 20px;
+}
+.shopSafetyList__imgBox {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 22px;
+}
+.shopSafetyList__ttl {
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+
+  &::after {
+    display: block;
+    width: 32px;
+    height: 14px;
+    margin: 8px auto 0;
+    background: radial-gradient(circle farthest-side, #D3D3D3, #D3D3D3 30%, transparent 30%, transparent);
+    background-size: 14px 100%;
+    background-position: top center;
+    content: "";
+  }
+}
+.shopSafetyList__txt {
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.71;
+}
+
+@include sp {
+  .shopSafetyArea {
+    padding-top: 30px;
+    padding-bottom: 47px;
+
+    .c-ttl01 {
+      margin-bottom: 30px;
+    }
+  }
+  .shopSafetyList {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 20px;
+  }
+  .shopSafetyList__item {
+    width: auto;
+    padding: 20px 20px 25px;
+    border-radius: 15px;
+  }
+  .shopSafetyList__imgBox {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 18px;
+
+    img {
+      width: 100%;
+    }
+  }
+  .shopSafetyList__ttl {
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+
+    &::after {
+      display: block;
+      width: 32px;
+      height: 14px;
+      margin: 8px auto 0;
+      background: radial-gradient(circle farthest-side, #D3D3D3, #D3D3D3 30%, transparent 30%, transparent);
+      background-size: 14px 100%;
+      background-position: top center;
+      content: "";
+    }
+  }
+  .shopSafetyList__txt {
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.71;
+  }
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/*  shopAboutArea
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.shopAboutArea {
+  padding-bottom: 0;
+
+  .c-ttl01 {
+    margin-bottom: 30px;
+  }
+}
+.shopAbout__contBox {
+  display: flex;
+  align-items: flex-start;
+  gap: cl(20,35)
+}
+.shopAbout__imgBox {
+  flex: 1 1 408px;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 67/49;
+  width: 100%;
+}
+.shopAbout__txtBox {
+  flex: 1 1 467px;
+}
+.shopAboutList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+.shopAboutList__item {
+  display: flex;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  padding: 20px 30px 19px;
+}
+.shopAboutList__ttl {
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 6em;
+  margin-right: 20px;
+  line-height: 1.857;
+}
+.shopAboutList__txt {
+  font-size: 14px;
+  line-height: 1.857;
+}
+.shopAbout__map {
+  margin-top: 60px;
+
+  iframe {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@include sp {
+  .shopAboutArea {
+    padding-top: 30px;
+    padding-bottom: 0;
+
+    .c-ttl01 {
+      margin-bottom: 30px;
+    }
+  }
+  .shopAbout__contBox {
+    display: block;
+  }
+  .shopAbout__imgBox {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .shopAbout__txtBox {
+  }
+  .shopAboutList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+  }
+  .shopAboutList__item {
+    display: flex;
+    border-radius: 15px;
+    padding: 20px 20px 19px;
+  }
+  .shopAboutList__ttl {
+    font-size: 14px;
+    min-width: 6em;
+    margin-right: 20px;
+    line-height: 1.7;
+  }
+  .shopAboutList__txt {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .shopAbout__map {
+    margin-top: 50px;
+
+    iframe {
+      width: 100%;
+      height: 300px;
+    }
+  }
+}

@@ -1,0 +1,384 @@
+.menuArea {
+  padding-bottom: 120px;
+}
+.menuSec {
+
+  & + & {
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: solid 2px #E8E8E8;
+  }
+
+  .c-ttl01 {
+    margin-bottom: 23px;
+  }
+  .c-ttl01__ja {
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-family: $font-futura;
+  }
+  .c-ttl01__en {
+    font-size: 32px;
+    font-family: $font-family;
+  }
+}
+.menuDiving__imgFrame {
+    aspect-ratio: 910/370;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 40px;
+}
+.menuDiving__contBox {
+  display: flex;
+  gap: 0 cl(40, 80);
+}
+.menuDiving__txtBox {
+  flex: 1 1 366px;
+}
+.menuDiving__lead {
+  font-size: 14px;
+  line-height: 1.785;
+}
+.menuDiving__link {
+  margin-top: 30px;
+
+  & + & {
+    margin-top: 15px;
+  }
+}
+
+.menuPrice__box {
+  flex: 1 1 454px
+}
+.menuPrice__ttl {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 3px;
+  margin-bottom: 20px;
+
+  &::before {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin: 0 10px -1px 0;
+    background-color: #001C10;
+    border-radius: 2px;
+    content: "";
+  }
+}
+.menuPriceList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+
+  &.row {
+    .menuPriceList__item {
+      width: calc((100% - (14px * 1)) / 2);
+    }
+  }
+}
+.menuPriceList__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 15px;
+  width: 100%;
+  padding: 20px 25px 19px;
+  background-color: #F4F4F4;
+  border-radius: 10px;
+}
+.menuPriceList__name {
+  font-size: 18px;
+  font-weight: 600;
+
+  .num {
+    font-size: 20px;
+  }
+  .subTxt {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+.menuPriceList__price {
+  margin-left: auto;
+  font-size: 15px;
+  font-weight: 600;
+
+  .num {
+    font-size: 20px;
+  }
+  .yen {
+    font-size: 18px;
+  }
+}
+
+@include sp {
+  .menuArea {
+    padding-bottom: 50px;
+  }
+  .menuSec {
+
+    & + & {
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+
+    .c-ttl01 {
+      margin-bottom: 18px;
+    }
+    .c-ttl01__ja {
+      margin-bottom: 5px;
+      font-size: 10px;
+      padding: 3px 9px;
+    }
+    .c-ttl01__en {
+      font-size: 24px;
+    }
+  }
+  .menuDiving__imgFrame {
+      aspect-ratio: 910/570;
+      border-radius: 15px;
+      margin-bottom: 24px;
+  }
+  .menuDiving__contBox {
+    display: block;
+  }
+  .menuDiving__txtBox {
+
+  }
+  .menuDiving__lead {
+    font-size: 14px;
+    line-height: 1.785;
+  }
+  .menuDiving__link {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+
+    & + & {
+      margin-top: 15px;
+    }
+  }
+
+  .menuPrice__box {
+    margin-top: 35px;
+  }
+  .menuPrice__ttl {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 3px;
+    margin-bottom: 15px;
+
+    &::before {
+      width: 15px;
+      height: 15px;
+      margin: 0 6px -1px 0;
+    }
+  }
+  .menuPriceList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 14px;
+
+    &.row {
+      .menuPriceList__item {
+        width: 100%;
+      }
+    }
+  }
+  .menuPriceList__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 15px;
+    width: 100%;
+    padding: 13px 20px 13px;
+    border-radius: 8px;
+  }
+  .menuPriceList__name {
+    font-size: 14px;
+    font-weight: 600;
+
+    .num {
+      font-size: 16px;
+    }
+    .subTxt {
+      display: inline;
+      margin-top: 0;
+      font-size: 11px;
+    }
+  }
+  .menuPriceList__price {
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: 600;
+
+    .num {
+      font-size: 16px;
+    }
+    .yen {
+      font-size: 14px;
+    }
+  }
+}
+
+
+
+/*** menuSec rental ***/
+.menuSec {
+  &.rental {
+    .c-ttl01 {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include sp {
+  .menuSec {
+    &.rental {
+      .c-ttl01 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+/*** menuSec reserve ***/
+.menuSec.reserve {
+  .c-ttl01 {
+    margin-bottom: 35px;
+  }
+  .okabanCalendar {
+    padding-top: 0;
+  }
+  .okabanCalendar .titCalendar {
+    display: none;
+  }
+}
+.menuReserve__txtBox {
+  flex: 1 1 331px;
+}
+.menuReserve__lead {
+  font-size: 15px;
+  line-height: 1.785;
+}
+.menuReserve__calender {
+  flex: 1 0 464px
+}
+
+@include sp {
+  .menuSec.reserve {
+    .c-ttl01 {
+      margin-bottom: 20px;
+    }
+    .okabanCalendar {
+      padding-top: 0;
+    }
+    .okabanCalendar .titCalendar {
+      display: none;
+    }
+  }
+  .menuReserve__txtBox {
+    flex: 1 1 331px;
+  }
+  .menuReserve__lead {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.785;
+  }
+  .menuReserve__calender {
+    flex: 1 0 464px
+  }
+}
+
+
+/*** menuSec safet ***/
+.menuSec.safety {
+  .c-ttl01 {
+    margin-bottom: 40px;
+  }
+}
+.menuSafetyList {
+
+}
+.menuSafetyList__item {
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  padding: 30px clamp(20px, vw(40), 40px);
+
+  & + & {
+    margin-top: 30px;
+  }
+}
+.menuSafetyList__ttl {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 17px;
+
+  &::before {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin: 0 10px -1px 0;
+    background-color: #001C10;
+    border-radius: 2px;
+    content: "";
+  }
+}
+.menuSafetyList__txt {
+  & +  & {
+    margin-top: 15px;
+  }
+}
+.menuSafetyList__link {
+  margin-top: 20px;
+}
+
+@include sp {
+  .menuSec.safety {
+    .c-ttl01 {
+      margin-bottom: 18px;
+    }
+  }
+  .menuSafetyList {
+
+  }
+  .menuSafetyList__item {
+    border-radius: 10px;
+    padding: 25px 20px;
+
+    & + & {
+      margin-top: 30px;
+    }
+  }
+  .menuSafetyList__ttl {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 17px;
+
+    &::before {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin: 0 6px -1px 0;
+      content: "";
+    }
+  }
+  .menuSafetyList__txt {
+    & +  & {
+      margin-top: 15px;
+    }
+  }
+  .menuSafetyList__link {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}

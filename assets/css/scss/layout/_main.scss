@@ -1,0 +1,58 @@
+
+/*** コンテナ ***/
+.l-bodyContainer {
+}
+.container {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+}
+.l-container {
+  overflow: hidden;
+}
+.l-mainContainer {
+  padding-left: $header-width;
+  height: 100%;
+  transition: padding .3s;
+  overflow: hidden;
+  position: relative;
+}
+.l-pageMain {
+  padding-top: 60px;
+  padding-bottom: 123px;
+  background-color: #F8F7F6;
+}
+
+@include hidePcHeader {
+  .l-mainContainer {
+    padding-left: 0;
+  }
+}
+
+
+@include sp {
+
+  .l-pageMain {
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* l-pageContainer
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.l-contentContainer {
+  background-color: #F8F7F6;
+  padding-top: 80px;
+  padding-bottom: 123px;
+}
+
+@include sp {
+  .l-contentContainer {
+
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+
+}

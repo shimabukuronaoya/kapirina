@@ -1,0 +1,183 @@
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* 固有
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.license {
+
+}
+.owd {
+  .scheduleList {
+  width: 608px;
+  }
+  .scheduleList__txt {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 2px;
+  }
+  @include sp {
+      .scheduleList {
+      width: auto;
+      }
+      .scheduleList__txt {
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 2px;
+      }
+  }
+}
+
+.aowd {
+  .licenseCurriculumList__item {
+    min-width: 293px;
+  }
+
+  @include sp {
+    .licenseCurriculumList__item {
+      min-width: 0;
+    }
+  }
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* licenseFirstArea
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.licenseFirstArea {
+  padding-bottom: 30px;
+}
+.licenseFirst__lead {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  line-height: 1.888;
+}
+
+@include sp {
+  .licenseFirstArea {
+    padding-bottom: 20px;
+  }
+  .licenseFirst__lead {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.888;
+  }
+
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* licenseCurriculumArea
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.licenseCurriculumArea {
+  padding-top: 30px;
+  padding-bottom: 57px;
+
+}
+.licenseCurriculumList {
+  display: flex;
+  justify-content: center;
+  gap: 0 59px;
+}
+.licenseCurriculumList__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc((100% - (59px * 2)) / 3);
+  border-radius: 20px;
+  border: solid 2px #383030;
+  background-color: #fff;
+  padding: 32px 15px 32px;
+  position: relative;
+
+  & + & {
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -46px;
+      bottom: 0;
+      width: 30px;
+      height: 30px;
+      margin: auto;
+      background: url(../img/common/ico_license-plus.svg) no-repeat center center/100%;
+      content: '';
+    }
+  }
+}
+.licenseCurriculumList__imgBox {
+  margin-bottom: 12px;
+
+  &.gakka {
+    margin-top: -5px;
+    margin-right: -11px;
+  }
+}
+.licenseCurriculumList__ttl {
+  margin-bottom: 8px;
+  font-size: cl(16,18);
+  font-weight: 600;
+  text-align: center;
+}
+.licenseCurriculumList__subTxt {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+.licenseCurriculum__note {
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@include sp {
+  .licenseCurriculumArea {
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+  }
+  .licenseCurriculumList {
+    display: block;
+  }
+  .licenseCurriculumList__item {
+    width: auto;
+    border-radius: 15px;
+    min-height: 0px;
+    padding: 15px 20px 15px;
+    position: relative;
+
+    & + & {
+      margin-top: 30px;
+      &::before {
+        top: -27px;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .licenseCurriculumList__imgBox {
+    margin-bottom: 8px;
+    transform: scale(0.9);
+
+    &.gakka {
+      margin-right: -11px;
+    }
+  }
+  .licenseCurriculumList__ttl {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .licenseCurriculumList__subTxt {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .licenseCurriculum__note {
+    margin-top: 30px;
+    font-size: 13px;
+    text-align: left;
+  }
+}

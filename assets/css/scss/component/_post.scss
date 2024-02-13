@@ -1,0 +1,23 @@
+.c-postCat {
+  width: fit-content;
+  border: solid 1px #9B9B9B;
+  border-radius: 3px;
+  color: #9B9B9B;
+  padding: 2px 4px;
+  font-size: 10px;
+  font-weight: 600;
+}
+.c-postDate {
+  color: #9B9B9B;
+  font-size: 12px;
+  font-family: $font-futura;
+
+  &::before {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 3px -1px 0px;
+    background: url(../img/common/ico_calender.svg) no-repeat center center/100%;
+    content: '';
+  }
+}

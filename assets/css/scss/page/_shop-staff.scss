@@ -1,0 +1,238 @@
+.staffArea {
+  padding-top: 0;
+  padding-bottom: 39px;
+}
+.staffFirst__imgBox {
+  margin-bottom: 42px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  aspect-ratio: 1820/800;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.staffFirst__lead {
+  margin-bottom: -8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.88;
+}
+.staffList {
+
+}
+.staffList__item {
+  padding-top: 80px;
+  padding-bottom: 76px;
+  position: relative;
+  z-index: 0;
+
+  &:nth-child(2n) {
+   &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100%;
+    margin: 0 calc(50% - 50vw);
+    background-color: #F7F7F7;
+    content: '';
+   }
+
+   .staffList__txt {
+    &::before {
+      color: #FFFFFF;
+    }
+  }
+  }
+}
+.staffList__imgBox {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 42px;
+  aspect-ratio: 1820/800;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.staffList__contBox {
+
+}
+.staffList__ttl {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 23px;
+
+  .subTxt {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .mainTxt {
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+.staffIntroList {
+ width: 100%;
+ max-width: 500px;
+  margin-bottom: 40px;
+  border-top: solid 1px #D6D6D6;
+  border-bottom: solid 1px #D6D6D6;
+
+  &.ttlLong {
+    .staffIntroList__ttl {
+      min-width: 6em;
+    }
+  }
+}
+.staffIntroList__item {
+  display: flex;
+  padding: 10px 0 10px;
+
+  & + & {
+    border-top: solid 1px #D6D6D6;
+  }
+}
+.staffIntroList__ttl {
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 4em;
+  margin-right: 20px;
+
+}
+.staffIntroList__txt {
+  font-size: 14px;
+}
+.staffList__txt {
+  font-size: 14px;
+  line-height: 1.71;
+  padding-left: 77px;
+  position: relative;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: -18px;
+    left: 0;
+    margin: auto;
+    font-size: 55px;
+    font-weight: 600;
+    content: "Message";
+    transform: rotate(90deg);
+    color: #EFEFEF;
+    transform-origin: 25px center;
+    font-family: $font-futura;
+  }
+
+}
+
+
+@include sp {
+  .staffArea {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+  .staffFirst__imgBox {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    aspect-ratio: 1820/1000;
+  }
+  .staffFirst__lead {
+    margin-bottom: -8px;
+    font-size: 15px;
+    line-height: 1.88;
+  }
+  .staffList {
+
+  }
+  .staffList__item {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    z-index: 0;
+  }
+  .staffList__imgBox {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    aspect-ratio: 1820/900;
+  }
+  .staffList__contBox {
+    padding: 0;
+  }
+  .staffList__ttl {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+
+    .subTxt {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .mainTxt {
+      display: block;
+      font-size: 26px;
+      font-weight: 600;
+    }
+  }
+  .staffIntroList {
+    margin-bottom: 20px;
+
+    &.ttlLong {
+      .staffIntroList__ttl {
+        min-width: 6em;
+      }
+    }
+  }
+  .staffIntroList__item {
+    display: flex;
+    padding: 10px 0 10px;
+
+    & + & {
+      border-top: solid 1px #D6D6D6;
+    }
+  }
+  .staffIntroList__ttl {
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 4em;
+    margin-right: 20px;
+
+  }
+  .staffIntroList__txt {
+    font-size: 13px;
+  }
+  .staffList__txt {
+    font-size: 14px;
+    line-height: 1.71;
+    padding-left: 50px;
+    position: relative;
+
+    &::before {
+      top: -7px;
+      left: -8px;
+      margin: auto;
+      font-size: 40px;
+    }
+
+  }
+
+}

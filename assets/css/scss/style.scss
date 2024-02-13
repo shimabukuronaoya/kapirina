@@ -1,0 +1,59 @@
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* ベースファイルを定義
+――――――――――――――――――――――――――――――――――――――――――――――*/
+
+@import "base/_setting.scss";
+@import "base/_mixin.scss";
+@import "base/_reset.scss";
+@import "base/_base.scss";
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* component
+――――――――――――――――――――――――――――――――――――――――――――――*/
+@import "component/_btn.scss";
+@import "component/_ttl.scss";
+@import "component/_post.scss";
+@import "component/_bread.scss";
+@import "component/_pageTtl.scss";
+@import "component/_linkTxt.scss";
+@import "component/_txtDot.scss";
+@import "component/_contentBox.scss";
+@import "component/_firstPhotoList.scss";
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* プラグインに関するcss
+――――――――――――――――――――――――――――――――――――――――――――――*/
+@import "plugin/_slick.scss";
+@import "plugin/_slick-theme.scss";
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* レイアウトに関するcss
+――――――――――――――――――――――――――――――――――――――――――――――*/
+@import "layout/_header.scss";
+@import "layout/_footer.scss";
+@import "layout/_main.scss";
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* 個別ページの読み込み
+――――――――――――――――――――――――――――――――――――――――――――――*/
+@import "page/_top.scss";
+@import "page/_menu.scss";
+@import "page/_shop.scss";
+@import "page/_shop-faq.scss";
+@import "page/_shop-staff.scss";
+@import "page/_contact.scss";
+@import "page/_shop-recruit.scss";
+// @import "page/_fundiving.scss";
+@import "page/_diving.scss";
+@import "page/_license.scss";
+@import "page/_post.scss";
+@import "page/_divingmap.scss";
+
+
+
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* utility
+――――――――――――――――――――――――――――――――――――――――――――――*/
+@import "utility/_utility.scss";

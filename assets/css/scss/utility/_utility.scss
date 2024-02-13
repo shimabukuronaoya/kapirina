@@ -1,0 +1,148 @@
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* display
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.u-d {
+    display: block;
+}
+.u-df {
+    display: flex;
+}
+.u-dn {
+    display: none;
+}
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* width
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.u-w100 {
+    width: 100%;
+}
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* z-index
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.u-z1 {
+    z-index: 1;
+}
+.u-z2 {
+    z-index: 2;
+}
+.u-z3 {
+    z-index: 3;
+}
+.u-z4 {
+    z-index: 4;
+}
+.u-z5 {
+    z-index: 5;
+}
+.u-z6 {
+    z-index: 6;
+}
+.u-z7 {
+    z-index: 7;
+}
+.u-z8 {
+    z-index: 8;
+}
+.u-z9 {
+    z-index: 9;
+}
+.u-z10 {
+    z-index: 10;
+}
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* potition
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.u-por {
+    position: relative;
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* flex
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.u-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* margin
+――――――――――――――――――――――――――――――――――――――――――――――*/
+
+@for $i from 1 through 30 {
+    $name: $i * 5;
+
+    .u-mt#{$name} {
+        margin-top: $i * 5px;
+    }
+    .u-mb#{$name} {
+        margin-bottom: $i * 5px;
+    }
+}
+
+@include pc {
+
+    @for $i from 1 through 30 {
+        $name: $i * 5;
+
+        .u-mt#{$name}-pc {
+            margin-top: $i * 5px;
+        }
+        .u-mb#{$name}-pc {
+            margin-bottom: $i * 5px;
+        }
+    }
+
+}
+
+@include sp {
+
+    @for $i from 1 through 30 {
+        $name: $i * 5;
+
+        .u-mt#{$name}-sp {
+            margin-top: $i * 5px;
+        }
+        .u-mb#{$name}-sp {
+            margin-bottom: $i * 5px;
+        }
+    }
+
+}
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* font-size
+――――――――――――――――――――――――――――――――――――――――――――――*/
+@include pc {
+    @for $i from 10 through 20 {
+
+        .u-fz#{$i}-pc {
+            font-size: #{$i} + 'px';
+        }
+    }
+}
+
+@include sp {
+    @for $i from 10 through 20 {
+
+        .u-fz#{$i}-sp {
+            font-size: #{$i} + 'px';
+        }
+    }
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* font
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.u-fwb {
+    font-weight: bold;
+}
+.u-fw600 {
+    font-weight: 600;
+}

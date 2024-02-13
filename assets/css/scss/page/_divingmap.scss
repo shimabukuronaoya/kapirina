@@ -1,0 +1,714 @@
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* divingmapFirstArea
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.divingmapFirstArea {
+  padding-bottom: 75px;
+}
+.divingmapFirst__lead {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.888;
+  margin-bottom: 62px;
+}
+.divingmap__imgBox {
+  display: flex;
+  justify-content: center;
+
+  picture {
+    max-width: 712px;
+    margin-left: -30px;
+  }
+}
+.miyakoSeasonalitySec {
+  margin-top: 116px;
+}
+.miyakoSeasonality__ttl {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 24px;
+
+  .subTxt {
+    margin-bottom: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: $font-futura;
+  }
+  .mainTxt {
+    font-size: 26px;
+    font-weight: 600;
+  }
+}
+.miyakoSeasonalityTableOuter {
+  border-radius: 20px;
+  border: solid 1px #BABABA;
+  overflow-x: auto;
+}
+.miyakoSeasonalityTable {
+  background-color: #fff;
+  width: 100%;
+  min-width: 800px;
+
+  tr {
+    border-top: solid 1px #BABABA;
+
+    &:first-child {
+      border-top: none;
+
+      th {
+        width: 69px;
+      }
+      th:first-child {
+          width: 82px;
+      }
+    }
+
+  }
+  th,td {
+    font-size: 14px;
+    padding: 16px 6px 15px;
+    text-align: center;
+    white-space: nowrap;
+
+    &:nth-child(2n) {
+      background-color: #F8F8F8;
+    }
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(11),
+    &:nth-child(12),
+    &:nth-child(13)
+    {
+      color: #1181E0;
+    }
+
+    &:nth-child(5),
+    &:nth-child(10)
+    {
+      color: #B09608;
+    }
+
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9)
+    {
+      color: #00AD79;
+    }
+  }
+  th {
+    font-weight: 600;
+  }
+  td {
+    .small {
+      font-size: 12px;
+    }
+  }
+
+  .month {
+    .small {
+      font-size: 12px;
+    }
+  }
+  .ttl {
+    color: #959595;
+
+    .txtBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon {
+      margin-right: 5px;
+      flex-shrink: 0;
+    }
+  }
+  .fixed01{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      border-right: 1px solid #BABABA;
+    }
+  }
+}
+.miyakoSeasonality__note {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 26px;
+  font-size: 12px;
+  line-height:  1.71;
+}
+
+@include sp {
+  .divingmapFirstArea {
+    padding-bottom: 50px;
+  }
+  .divingmapFirst__lead {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.888;
+    margin-bottom: 30px;
+  }
+  .divingmap__imgBox {
+    display: flex;
+    justify-content: center;
+    margin: 0 -15px;
+
+    picture {
+      margin-left: 0;
+    }
+  }
+  .miyakoSeasonalitySec {
+    margin-top: 60px;
+  }
+  .miyakoSeasonality__ttl {
+    margin-bottom: 20px;
+
+    .subTxt {
+      margin-bottom: 5px;
+      font-size: 11px;
+    }
+    .mainTxt {
+      font-size: 22px;
+    }
+  }
+  .miyakoSeasonalityTableOuter {
+    border-radius: 15px;
+  }
+  .miyakoSeasonalityTable {
+    width: 100%;
+    min-width: 800px;
+    // table-layout: fixed;
+
+    tr {
+      border-top: solid 1px #BABABA;
+
+      &:first-child {
+        border-top: none;
+
+        th {
+          width: 40px;
+        }
+        th:first-child {
+          width: 50px;
+          border-radius: 15px 0 0 0;
+        }
+      }
+      &:last-child {
+        th:first-child {
+          border-radius: 0 0 0 15px;
+        }
+      }
+
+    }
+    th,td {
+      height: 40px;
+      font-size: 12px;
+      padding: 12px 6px 12px;
+    }
+    th {
+      font-weight: 600;
+    }
+    td {
+
+      .small {
+        font-size: 12px;
+      }
+    }
+
+    .month {
+      .small {
+        font-size: 12px;
+      }
+    }
+    .ttl {
+
+      .icon {
+        margin-right: 5px;
+        flex-shrink: 0;
+      }
+    }
+    .fixed01{
+
+      &:before{
+
+      }
+    }
+  }
+  .miyakoSeasonality__note {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    font-size: 12px;
+    line-height:  1.71;
+  }
+}
+
+
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* mapPointArea
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.mapPointArea {
+  padding-top: 0;
+  padding-bottom: 114px;
+}
+.mapPoint__contBox {
+  padding-top: 73px;
+  padding-bottom: 73px;
+  border-top: solid 2px #D3D3D3;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+
+  &.irabu {
+    .mapPoint__ttl {
+      color: #53B492;
+    }
+    .mapPoint__season {
+      background-color: #E7F8F2;
+
+      .ttl {
+        color: #53B492;
+      }
+    }
+    .mapPoint__map {
+      svg {
+        // margin-left: -45px;
+      }
+    }
+    .mapPointList__ttl::before {
+      background-color: #53B492;
+    }
+    .mapPointInfoList__ttl {
+      background-color: #53B492;
+    }
+    .mapPointList__map::before {
+      background-image: url(../img/divingmap/ico_map-pin-irabu.svg);
+    }
+  }
+
+  &.shimoji {
+    .mapPoint__ttl {
+      color: #5A83C3;
+    }
+    .mapPoint__season {
+      background-color: #EDF5FF;
+
+      .ttl {
+        color: #5A83C3;
+      }
+    }
+    .mapPoint__lead {
+      @include pc {
+
+        margin-bottom: 60px;
+      }
+    }
+    .mapPoint__map {
+      display: flex;
+
+      @include pc {
+
+        margin-bottom: 71px;
+      }
+
+      svg {
+
+      }
+    }
+    .mapPointList__ttl::before {
+      background-color: #5A83C3;
+    }
+    .mapPointInfoList__ttl {
+      background-color: #5A83C3;
+    }
+    .mapPointList__map::before {
+      background-image: url(../img/divingmap/ico_map-pin-shimoji.svg);
+    }
+  }
+}
+.mapPoint__ttlBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+  margin-bottom: 27px;
+}
+.mapPoint__ttl {
+  font-size: 32px;
+  font-weight: 600;
+}
+.mapPoint__season {
+  display: flex;
+  align-items: center;
+  gap: 0 18px;
+  background-color: #E7F8F2;
+  border-radius: 25px;
+  padding: 6px 19px;
+
+  .ttl {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .month {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+.mapPoint__lead {
+  margin-bottom: 73px;
+  font-size: 16px;
+  line-height: 1.625;
+}
+.mapPoint__map {
+  display: flex;
+  justify-content: center;
+}
+.mapPointList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+  gap: 46px cl(30,56);
+  margin-top: 59px;
+}
+.mapPointList__item {
+
+}
+.mapPointList__imgBox {
+  position: relative;
+  margin-bottom: 22px;
+}
+.mapPointList__imgFrame {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+.mapPointList__map {
+  position: absolute;
+  right: 15px;
+  bottom: -22px;
+  z-index: 2;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 13px;
+    height: 19px;
+    margin: auto;
+    background: url(../img/divingmap/ico_map-pin-irabu.svg) no-repeat center center;
+    background-size: 100%;
+    content: '';
+  }
+}
+.mapPointList__contBox {
+
+}
+.mapPointList__ttl {
+  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  padding-left: 20px;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 15px;
+    height: 22px;
+    margin: auto;
+    mask-image: url(../img/divingmap/ico_ttl-map.svg);
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    content: '';
+  }
+}
+.mapPointInfoList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin-bottom: 16px;
+}
+.mapPointInfoList__item {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+.mapPointInfoList__ttl {
+  width: 63px;
+  flex-shrink: 0;
+  background-color: #53B492;
+  border-radius: 16px;
+  color: #fff;
+  padding: 2px 8px 3px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+.mapPointInfoList__txt {
+  font-size: 14px;
+}
+.mapPointList__txt {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+@include sp {
+  .mapPointArea {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+  .mapPoint__contBox {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .mapPoint__ttlBox {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+    margin-bottom: 27px;
+  }
+  .mapPoint__ttl {
+    font-size: 26px;
+  }
+  .mapPoint__season {
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+    border-radius: 25px;
+    padding: 6px 15px;
+
+    .ttl {
+      font-size: 13px;
+    }
+    .month {
+      font-size: 13px;
+    }
+  }
+  .mapPoint__lead {
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.625;
+  }
+  .mapPoint__map {
+    display: flex;
+    justify-content: flex-start;
+
+    svg {
+      height: auto;
+    }
+  }
+  .mapPointList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 46px cl(30,56);
+    margin-top: 40px;
+  }
+  .mapPointList__item {
+
+  }
+  .mapPointList__imgBox {
+    position: relative;
+    margin-bottom: 16px;
+  }
+  .mapPointList__imgFrame {
+      border-radius: 15px;
+  }
+  .mapPointList__map {
+    position: absolute;
+    right: 15px;
+    bottom: -22px;
+    z-index: 2;
+
+    &::before {
+    }
+  }
+  .mapPointList__contBox {
+
+  }
+  .mapPointList__ttl {
+    margin-bottom: 15px;
+    font-size: 19px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 14px;
+      height: 21px;
+      margin: auto;
+    }
+  }
+  .mapPointInfoList {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    margin-bottom: 16px;
+  }
+  .mapPointInfoList__item {
+    display: flex;
+    align-items: center;
+    gap: 0 6px;
+  }
+  .mapPointInfoList__ttl {
+    width: 55px;
+    padding: 3px 5px 3px;
+    font-size: 12px;
+  }
+  .mapPointInfoList__txt {
+    font-size: 14px;
+  }
+  .mapPointList__txt {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+
+/*** map-pin-position ***/
+#irabu-chinsen .mapPointList__map::before {
+  top: 27px;
+  left: 132px;
+}
+#irabu-twinHole .mapPointList__map::before {
+  top: 6px;
+  left: 94px;
+}
+#irabu-funausagi .mapPointList__map::before {
+  top: -13px;
+  left: 57px;
+}
+#irabu-snakeHole .mapPointList__map::before {
+  top: -16px;
+  left: 50px;
+}
+#irabu-dentarLock .mapPointList__map::before {
+  top: -19px;
+  left: 30px;
+}
+#irabu-hakuchoYouchien .mapPointList__map::before {
+  top: -19px;
+  left: 26px;
+}
+#irabu-wArch .mapPointList__map::before {
+  top: -22px;
+  left: 14px;
+}
+#irabu-lArch-warpHole .mapPointList__map::before {
+  top: -27px;
+  left: 21px;
+}
+#irabu-zArch .mapPointList__map::before {
+  top: -23px;
+  left: -1px;
+}
+#irabu-crossHole .mapPointList__map::before {
+  top: -24px;
+  left: -15px;
+}
+#irabu-overHang .mapPointList__map::before {
+  top: -25px;
+  left: -21px;
+}
+#irabu-surgeonreaf .mapPointList__map::before {
+  top: -17px;
+  left: -26px;
+}
+#shimoji-cristalPark .mapPointList__map::before {
+  top: 84px;
+  left: 52px;
+}
+#shimoji-lockBeauty .mapPointList__map::before {
+  top: 92px;
+  left: 32px;
+}
+#shimoji-twinCave .mapPointList__map::before {
+  top: 83px;
+  left: 11px;
+}
+#shimoji-joouRoom .mapPointList__map::before {
+  top: 83px;
+  left: 11px;
+}
+#shimoji-naruhodo .mapPointList__map::before {
+  top: 76px;
+  left: 4px;
+}
+#shimoji-sangoHole .mapPointList__map::before {
+  top: 79px;
+  left: 8px;
+}
+#shimoji-ichinoseDrop .mapPointList__map::before {
+  top: 77px;
+  left: 5px;
+}
+#shimoji-ichinoseHole .mapPointList__map::before {
+  top: 77px;
+  left: 5px;
+}
+#shimoji-marineLake .mapPointList__map::before {
+  top: 70px;
+  left: 5px;
+}
+#shimoji-nakanoshimaHole .mapPointList__map::before {
+  top: 68px;
+  left: 1px;
+}
+#shimoji-nakanoshimaChannel .mapPointList__map::before {
+  top: 68px;
+  left: 1px;
+}
+#shimoji-honDrop .mapPointList__map::before {
+  top: 62px;
+  left: -3px;
+}
+#shimoji-antonio .mapPointList__map::before {
+  top: 57px;
+  left: -5px;
+}
+#shimoji-miniToriike .mapPointList__map::before {
+  top: 53px;
+  left: -6px;
+}
+#shimoji-toriike .mapPointList__map::before {
+  top: 50px;
+  left: -8px;
+}
+#shimoji-maou .mapPointList__map::before {
+  top: 42px;
+  left: -11px;
+}
+#shimoji-panata .mapPointList__map::before {
+  top: 34px;
+  left: -13px;
+}
+#shimoji-triple3 .mapPointList__map::before {
+  top: 27px;
+  left: -15px;
+}
