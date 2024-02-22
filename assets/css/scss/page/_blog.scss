@@ -1,0 +1,102 @@
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* blogArea
+――――――――――――――――――――――――――――――――――――――――――――――*/
+.blogArea {
+
+}
+
+.blogNavList {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid #001C10;
+  border-radius: 12px;
+  margin-bottom: 50px;
+}
+
+.blogNavList__item {
+  font-size: 12px;
+  font-family: "ヒラギノ角ゴシック";
+  font-weight: 600;
+  color: #001C10;
+  padding: 12px 50px;
+  position: relative;
+
+  &+&::before{
+    content: " ";
+    position: absolute;
+    height: 25px;
+    width: 1px;
+    background-color: #F4F4F4;
+    margin: 0 8px;
+  }
+
+  &:active{
+    background-color: #001C10;
+    color: #FFFFFF;
+  }
+
+  &:hover{
+    background-color: #F4F4F4;
+  }
+}
+
+.blogBox {
+
+}
+
+.blogList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 57px 35px;
+}
+
+.blogList__item {
+  max-width: 280px;
+}
+
+.blogList__img {
+  width: 100%;
+}
+
+.blogList__category {
+  margin-top: 23px;
+  margin-bottom: 21px;
+  display: flex;
+}
+
+.blogList__tag {
+  color: #9B9B9B;
+  text-align: left;
+  padding: 5px;
+  border: 1px solid #9B9B9B;
+  border-radius: 3px;
+  font-size: 10px;
+}
+
+.blogList__date {
+  color: #9B9B9B;
+  text-align: right;
+  position: relative;
+
+  &::before{
+    content: " ";
+    position: absolute;
+  }
+}
+
+.blogList__ttl {
+  font-family: "ヒラギノ角ゴシック";
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 22px;
+}
+
+.blogList__text {
+  font-family: "ヒラギノ角ゴシック";
+  font-size: 14px;
+  line-height: 1.714;
+}
+
