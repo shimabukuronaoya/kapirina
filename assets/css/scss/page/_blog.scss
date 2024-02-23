@@ -1,15 +1,13 @@
 /*――――――――――――――――――――――――――――――――――――――――――――
 /* blogArea
 ――――――――――――――――――――――――――――――――――――――――――――――*/
-.blogArea {
-
-}
 
 .blogNavList {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  gap: 0 15px;
   padding: 8px;
   border: 1px solid #001C10;
   border-radius: 12px;
@@ -17,20 +15,22 @@
 }
 
 .blogNavList__item {
+  width: 180px;
   font-size: 12px;
   font-family: "ヒラギノ角ゴシック";
   font-weight: 600;
   color: #001C10;
-  padding: 12px 50px;
   position: relative;
 
   &+&::before{
     content: " ";
     position: absolute;
+    top: 8px;
+    left: -8px;
     height: 25px;
     width: 1px;
     background-color: #F4F4F4;
-    margin: 0 8px;
+    margin: auto;
   }
 
   &:active{
@@ -43,28 +43,39 @@
   }
 }
 
-.blogBox {
-
+.blogNavList__link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 12px;
+  text-align: center;
+  border-radius: 8px;
 }
 
 .blogList {
   display: flex;
   flex-wrap: wrap;
   gap: 57px 35px;
+  justify-content: space-between;
 }
 
 .blogList__item {
   max-width: 280px;
 }
 
-.blogList__img {
-  width: 100%;
+.blogList__imgBox {
+  width: auto;
+
+  img{
+    border-radius: 20px;
+  }
 }
 
 .blogList__category {
   margin-top: 23px;
   margin-bottom: 21px;
   display: flex;
+  justify-content: space-between;
 }
 
 .blogList__tag {
