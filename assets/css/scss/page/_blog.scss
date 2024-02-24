@@ -2,6 +2,15 @@
 /* blogArea
 ――――――――――――――――――――――――――――――――――――――――――――――*/
 
+.is-active{
+  background-color: #3B3333;
+  color: #FFFFFF;
+
+  &:hover{
+    pointer-events: none;
+  }
+}
+
 .blogNavList {
   width: 100%;
   display: flex;
@@ -25,21 +34,13 @@
   &+&::before{
     content: " ";
     position: absolute;
-    top: 8px;
+    top: 0;
     left: -8px;
+    bottom: 0;
     height: 25px;
     width: 1px;
-    background-color: #F4F4F4;
+    background-color: #D3D3D3;
     margin: auto;
-  }
-
-  &:active{
-    background-color: #001C10;
-    color: #FFFFFF;
-  }
-
-  &:hover{
-    background-color: #F4F4F4;
   }
 }
 
@@ -50,17 +51,20 @@
   padding: 12px 12px;
   text-align: center;
   border-radius: 8px;
+
+  &:hover{
+    background-color: #E5E5E5;
+  }
 }
 
 .blogList {
   display: flex;
   flex-wrap: wrap;
   gap: 57px 35px;
-  justify-content: space-between;
 }
 
 .blogList__item {
-  max-width: 280px;
+  width: calc((100% - 70px) / 3);
 }
 
 .blogList__imgBox {
@@ -93,8 +97,11 @@
   position: relative;
 
   &::before{
-    content: " ";
+    content: url(/assets/img/common/ico_calender.svg);
     position: absolute;
+    top: 0;
+    left: -17px;
+    bottom: 0;
   }
 }
 
@@ -111,3 +118,121 @@
   line-height: 1.714;
 }
 
+.blogPageNationBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.blogPageNationList {
+  display: flex;
+  align-items: center;
+  gap: 0 6px;
+}
+
+.blogPageNationList__item {
+
+}
+
+.blogPageNationList__link{
+  display: block;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #3A3333;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+
+  &:hover{
+    background-color:  #3B3333;
+    color: #FFFFFF;
+    translate: 1.0s;
+  }
+}
+
+@include sp{
+  .blogNavList {
+    flex-wrap: wrap;
+  }
+  
+  .blogNavList__item {
+    width: calc((100% - 15px) / 2);
+    position: relative;
+  
+    &+&::before{
+      
+    }
+  }
+  
+  .blogNavList__link{
+  
+  }
+  
+  .blogList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px 20px;
+  }
+  
+  .blogList__item {
+    width: calc((100% - 20px) / 2);
+  }
+  
+  .blogList__imgBox {
+
+  }
+  
+  .blogList__category {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .blogList__tag {
+    padding: 3px;
+  }
+  
+  
+  .blogList__ttl {
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+  
+  .blogList__text {
+    font-size: 13px;
+  }
+  
+  .blogPageNationBox {
+    margin-top: 50px;
+  }
+  
+  .blogPageNationList {
+    
+  }
+  
+  .blogPageNationList__item {
+  
+  }
+  
+  .blogPageNationList__link{
+    
+  
+    &:hover{
+      
+    }
+  }
+}
+
+@media(max-width:500px){
+  .blogList {
+    gap: 35px 0;
+  }
+  
+  .blogList__item {
+    width: 100%;
+  }
+}
