@@ -4898,6 +4898,11 @@ textarea {
   margin-right: 5px;
 }
 
+.radioList__item {
+  margin-left: 16px;
+  font-size: 14px;
+}
+
 .shopRecruit__link {
   margin: 0 auto;
   margin-top: 60px;
