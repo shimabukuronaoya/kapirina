@@ -25,7 +25,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/header.php"); ?>
 <!-- cotnact -->
 <section class="l-section contactArea">
   <div class="l-content">
-    <p class="contact__lead">下記フォームより必要事項をご記入の上お送りください。<br class="pc">ご予約の際は<a href="#">予約専用フォーム</a>よりお申し込みください。<br class="pc">お問合せいただいたメールには必ず24時間以内に返信をお送りしております。</p>
+    <p class="contact__lead">下記フォームより必要事項をご記入の上お送りください。<br class="pc">ご予約の際は<a href="#" class="contact__lead--link">予約専用フォーム</a>　よりお申し込みください。<br class="pc">お問合せいただいたメールには必ず24時間以内に返信をお送りしております。</p>
 
     <form action="post" class="contactForm">
       <dl class="contactFormList">

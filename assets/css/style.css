@@ -4833,8 +4833,17 @@ textarea {
   line-height: 1.75;
   padding-bottom: 60px;
 }
-.contact__lead a {
+
+.contact__lead--link {
   border-bottom: 1px solid #001C10;
+  position: relative;
+}
+.contact__lead--link::after {
+  content: url(/assets/img/common/ico_link-txt-arrow.svg);
+  position: absolute;
+  top: -4px;
+  margin: 0 1px;
+  display: inline-block;
 }
 
 .contactForm {
@@ -4918,6 +4927,10 @@ textarea {
     font-weight: 600;
     line-height: 1.75;
     padding-bottom: 40px;
+  }
+  .contact__lead--link::after {
+    top: -2px;
+    margin-left: 0;
   }
   .contactForm {
     width: 100%;
