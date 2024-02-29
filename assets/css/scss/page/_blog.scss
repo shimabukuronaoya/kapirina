@@ -2,14 +2,16 @@
 /* blogArea
 ――――――――――――――――――――――――――――――――――――――――――――――*/
 
-.is-active{
-  background-color: #3B3333;
-  color: #FFFFFF;
-
-  &:hover{
-    pointer-events: none;
+.blogArea{
+  .is-active{
+    background-color: #3B3333;
+    color: #FFFFFF;
+  
+    &:hover{
+      pointer-events: none;
+    }
   }
-}
+} 
 
 .blogNavList {
   width: 100%;

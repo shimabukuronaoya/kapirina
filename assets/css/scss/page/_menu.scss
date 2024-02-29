@@ -1,384 +1,360 @@
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* MenuArea
+――――――――――――――――――――――――――――――――――――――――――――――*/
+
 .menuArea {
-  padding-bottom: 120px;
+  padding-bottom: 120px;  
 }
-.menuSec {
 
-  & + & {
-    margin-top: 60px;
-    padding-top: 60px;
-    border-top: solid 2px #E8E8E8;
+.menuSection {
+
+}
+
+.menuList {
+
+}
+
+.menuList__item {
+
+  .c-ttl01{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 34px;
   }
 
-  .c-ttl01 {
-    margin-bottom: 23px;
+  .c-ttl01__ja{
+    font-family: "Futura", "ヒラギノ角ゴシック", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    margin-bottom: 19px;
   }
-  .c-ttl01__ja {
-    margin-bottom: 15px;
-    font-size: 12px;
-    font-family: $font-futura;
-  }
-  .c-ttl01__en {
+
+  .c-ttl01__en{
     font-size: 32px;
-    font-family: $font-family;
+    font-weight: 600;
+  }
+
+  padding-bottom: 60px;
+  border-bottom: 3px solid #F4F4F4;
+  margin-bottom: 60px;
+}
+
+.menuList__imgBox {
+  border-radius: 20px;
+  width: 100%;
+  height: 370px;
+  margin-bottom: 40px;
+
+  img{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
   }
 }
-.menuDiving__imgFrame {
-    aspect-ratio: 910/370;
-    width: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    z-index: 0;
-    margin-bottom: 40px;
-}
-.menuDiving__contBox {
-  display: flex;
-  gap: 0 cl(40, 80);
-}
-.menuDiving__txtBox {
-  flex: 1 1 366px;
-}
-.menuDiving__lead {
-  font-size: 14px;
-  line-height: 1.785;
-}
-.menuDiving__link {
-  margin-top: 30px;
 
-  & + & {
+.menuList__contBox {
+  display: flex;
+  gap: 0 90px;
+}
+
+.menuList__txtBox {
+  width: 366px;
+}
+
+.menuList__lead {
+  font-size: 14px;
+  line-height: 1.78;
+  margin-bottom: 35px;
+}
+
+.menuList__link{
+
+  &+&{
     margin-top: 15px;
   }
 }
 
-.menuPrice__box {
-  flex: 1 1 454px
+.menuList__courseBox {
+  width: 454px;
 }
-.menuPrice__ttl {
+
+.courseBox__ttl {
   font-size: 18px;
   font-weight: 600;
-  margin-top: 3px;
-  margin-bottom: 20px;
+  font-family: "ヒラギノ角ゴシック";
+  margin-bottom: 25px;
 
-  &::before {
+  &::before{
+    content: ' ';
     display: inline-block;
     width: 17px;
     height: 17px;
-    margin: 0 10px -1px 0;
     background-color: #001C10;
     border-radius: 2px;
-    content: "";
+    margin: 0 10px -2px 0;
   }
 }
-.menuPriceList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 14px;
 
-  &.row {
-    .menuPriceList__item {
-      width: calc((100% - (14px * 1)) / 2);
-    }
-  }
+.courseList {
+
 }
-.menuPriceList__item {
+
+.courseList__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 15px;
-  width: 100%;
-  padding: 20px 25px 19px;
+  gap: 0 30px;
   background-color: #F4F4F4;
   border-radius: 10px;
+  padding: 23px 25px;
+
+  &+&{
+    margin-top: 12px;
+  }
 }
-.menuPriceList__name {
+
+.courseName {
   font-size: 18px;
   font-weight: 600;
-
-  .num {
-    font-size: 20px;
-  }
-  .subTxt {
-    display: block;
-    margin-top: 10px;
-    font-size: 12px;
-  }
 }
-.menuPriceList__price {
-  margin-left: auto;
-  font-size: 15px;
+
+.coursePrice {
+  font-size: 20px;
   font-weight: 600;
-
-  .num {
-    font-size: 20px;
-  }
-  .yen {
-    font-size: 18px;
-  }
 }
 
-@include sp {
+.yen {
+  font-size: 18px;
+}
+
+.tax {
+  font-size: 15px;
+}
+
+@include sp{
   .menuArea {
-    padding-bottom: 50px;
+    padding-bottom: 60px;  
   }
-  .menuSec {
-
-    & + & {
-      margin-top: 40px;
-      padding-top: 40px;
+  
+  .menuSection {
+  
+  }
+  
+  .menuList {
+  
+  }
+  
+  .menuList__item {
+  
+    .c-ttl01{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 25px;
     }
-
-    .c-ttl01 {
-      margin-bottom: 18px;
+  
+    .c-ttl01__ja{
+      font-family: "Futura", "ヒラギノ角ゴシック", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+      margin-bottom: 10px;
     }
-    .c-ttl01__ja {
-      margin-bottom: 5px;
-      font-size: 10px;
-      padding: 3px 9px;
+  
+    .c-ttl01__en{
+      font-size: 25px;
+      font-weight: 600;
     }
-    .c-ttl01__en {
-      font-size: 24px;
+  
+    padding-bottom: 30px;
+    border-bottom: 3px solid #F4F4F4;
+    margin-bottom: 30px;
+  }
+  
+  .menuList__imgBox {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+  
+    img{
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
     }
   }
-  .menuDiving__imgFrame {
-      aspect-ratio: 910/570;
-      border-radius: 15px;
-      margin-bottom: 24px;
+  
+  .menuList__contBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
-  .menuDiving__contBox {
-    display: block;
+  
+  .menuList__txtBox {
+    width: 100%;
+    margin-bottom: 25px;
   }
-  .menuDiving__txtBox {
-
-  }
-  .menuDiving__lead {
+  
+  .menuList__lead {
     font-size: 14px;
-    line-height: 1.785;
+    line-height: 1.78;
+    margin-bottom: 25px;
   }
-  .menuDiving__link {
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
+  
+  .menuList__link{
 
-    & + & {
+    margin: 0 auto;
+  
+    &+&{
       margin-top: 15px;
     }
   }
-
-  .menuPrice__box {
-    margin-top: 35px;
+  
+  .menuList__courseBox {
+    width: 100%;
   }
-  .menuPrice__ttl {
-    font-size: 17px;
+  
+  .courseBox__ttl {
+    font-size: 16px;
     font-weight: 600;
-    margin-top: 3px;
+    font-family: "ヒラギノ角ゴシック";
     margin-bottom: 15px;
-
-    &::before {
-      width: 15px;
-      height: 15px;
-      margin: 0 6px -1px 0;
+  
+    &::before{
+      content: ' ';
+      display: inline-block;
+      width: 17px;
+      height: 17px;
+      background-color: #001C10;
+      border-radius: 2px;
+      margin: 0 10px -2px 0;
     }
   }
-  .menuPriceList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 14px;
-
-    &.row {
-      .menuPriceList__item {
-        width: 100%;
-      }
-    }
+  
+  .courseList {
+  
   }
-  .menuPriceList__item {
+  
+  .courseList__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 8px 15px;
-    width: 100%;
-    padding: 13px 20px 13px;
-    border-radius: 8px;
+    gap: 0 20px;
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    padding: 14px 25px;
+  
+    &+&{
+      margin-top: 10px;
+    }
   }
-  .menuPriceList__name {
+  
+  .courseName {
     font-size: 14px;
     font-weight: 600;
-
-    .num {
-      font-size: 16px;
-    }
-    .subTxt {
-      display: inline;
-      margin-top: 0;
-      font-size: 11px;
-    }
   }
-  .menuPriceList__price {
-    margin-left: auto;
-    font-size: 14px;
+  
+  .coursePrice {
+    font-size: 16px;
     font-weight: 600;
-
-    .num {
-      font-size: 16px;
-    }
-    .yen {
-      font-size: 14px;
-    }
   }
-}
-
-
-
-/*** menuSec rental ***/
-.menuSec {
-  &.rental {
-    .c-ttl01 {
-      margin-bottom: 40px;
-    }
-  }
-}
-
-@include sp {
-  .menuSec {
-    &.rental {
-      .c-ttl01 {
-        margin-bottom: 20px;
-      }
-    }
-  }
-}
-
-/*** menuSec reserve ***/
-.menuSec.reserve {
-  .c-ttl01 {
-    margin-bottom: 35px;
-  }
-  .okabanCalendar {
-    padding-top: 0;
-  }
-  .okabanCalendar .titCalendar {
-    display: none;
-  }
-}
-.menuReserve__txtBox {
-  flex: 1 1 331px;
-}
-.menuReserve__lead {
-  font-size: 15px;
-  line-height: 1.785;
-}
-.menuReserve__calender {
-  flex: 1 0 464px
-}
-
-@include sp {
-  .menuSec.reserve {
-    .c-ttl01 {
-      margin-bottom: 20px;
-    }
-    .okabanCalendar {
-      padding-top: 0;
-    }
-    .okabanCalendar .titCalendar {
-      display: none;
-    }
-  }
-  .menuReserve__txtBox {
-    flex: 1 1 331px;
-  }
-  .menuReserve__lead {
-    margin-bottom: 20px;
+  
+  .yen {
     font-size: 14px;
-    line-height: 1.785;
   }
-  .menuReserve__calender {
-    flex: 1 0 464px
+  
+  .tax {
+    font-size: 11px;
   }
 }
 
 
-/*** menuSec safet ***/
-.menuSec.safety {
-  .c-ttl01 {
-    margin-bottom: 40px;
-  }
-}
-.menuSafetyList {
+/*** Rental ***/
+.menuRentalBox {
 
 }
-.menuSafetyList__item {
-  background-color: #F5F5F5;
+
+.menuRentalList {
+  display: flex;
+  gap: 12px 14px;
+  flex-wrap: wrap;
+}
+
+.menuRentalList__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 30px;
+  align-items: center;
+  background-color: #F4F4F4;
   border-radius: 10px;
-  padding: 30px clamp(20px, vw(40), 40px);
-
-  & + & {
-    margin-top: 30px;
-  }
+  padding: 23px 25px;
+  width: calc((100% - 14px)/2);
 }
-.menuSafetyList__ttl {
+
+.menuRentalList__name {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 17px;
 
-  &::before {
-    display: inline-block;
-    width: 17px;
-    height: 17px;
-    margin: 0 10px -1px 0;
-    background-color: #001C10;
-    border-radius: 2px;
-    content: "";
+  .detail{
+    font-size: 12px;
   }
 }
-.menuSafetyList__txt {
-  & +  & {
-    margin-top: 15px;
-  }
-}
-.menuSafetyList__link {
-  margin-top: 20px;
+
+.menuRentalList__price {
+  font-size: 19px;
+  font-weight: 600;
 }
 
-@include sp {
-  .menuSec.safety {
-    .c-ttl01 {
-      margin-bottom: 18px;
-    }
-  }
-  .menuSafetyList {
+.yen {
+  font-size: 17px;
+}
+
+.tax {
+  font-size: 14px;
+}
+
+@include sp{
+  .menuRentalBox {
 
   }
-  .menuSafetyList__item {
+  
+  .menuRentalList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+  }
+  
+  .menuRentalList__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+    align-items: center;
+    background-color: #F4F4F4;
     border-radius: 10px;
-    padding: 25px 20px;
-
-    & + & {
-      margin-top: 30px;
-    }
+    padding: 14px 25px;
+    width: 100%;
   }
-  .menuSafetyList__ttl {
-    font-size: 17px;
+  
+  .menuRentalList__name {
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 17px;
-
-    &::before {
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      margin: 0 6px -1px 0;
-      content: "";
+  
+    .detail{
+      font-size: 8px;
     }
   }
-  .menuSafetyList__txt {
-    & +  & {
-      margin-top: 15px;
-    }
+  
+  .menuRentalList__price {
+    font-size: 16px;
+    font-weight: 600;
   }
-  .menuSafetyList__link {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  
+  .yen {
+    font-size: 14px;
   }
-
+  
+  .tax {
+    font-size: 11px;
+  }
 }
+
+
+
+
+

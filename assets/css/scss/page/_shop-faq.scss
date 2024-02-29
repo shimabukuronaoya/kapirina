@@ -1,223 +1,336 @@
 .faqArea {
-  padding-top: 0;
   padding-bottom: 120px;
 }
+
 .faqList {
-  margin-top: -16px;
+  width: 100%;
 }
+
 .faqList__item {
-  & + & {
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &+&{
+    margin-top: 40px;
   }
 }
+
 .faqList__q {
-  padding: 20px 25px;
+  padding: 25px;
 }
-.faqList__qTxt {
+
+.faqList__q--txt {
   font-size: 18px;
   font-weight: 600;
+  margin-left: 41px;
   position: relative;
-  padding-left: 35px;
 
-  &::before {
+  &::before{
+    content: 'Q';
+    font-size: 13px;
+    font-weight: bold;
+    font-family: "futura";
+    background-color: #313590;
+    color: #FFFFFF;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
+    left: -41px;
     margin: auto;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 50%;
-    background-color: #313590;
-    padding-top: 1px;
-    content: 'Q';
   }
 }
+
 .faqList__a {
-  padding: 25px 25px 19px;
+  padding: 25px;
   background-color: #F5F5F5;
   border-radius: 20px;
 }
-.faqList__aCont {
-  position: relative;
-  padding-left: 36px;
-  font-size: 14px;
-  line-height: 1.71;
 
-  &::before {
+.faqList__a--txt {
+  font-size: 14px;
+  font-family: "ヒラギノ角ゴシック";
+  line-height: 1.71;
+  margin-left: 41px;
+  position: relative;
+
+  &::before{
+    content: 'A';
+    font-size: 13px;
+    font-weight: bold;
+    font-family: "futura";
+    background-color: #903232;
+    color: #FFFFFF;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
+    left: -41px;
     margin: auto;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 50%;
-    background-color: #903232;
-    content: 'A';
   }
 }
 
-@include sp {
-  .faqArea {
-    padding-top: 0;
-    padding-bottom: 50px;
-  }
-  .faqList {
-    margin-top: -16px;
-  }
-  .faqList__item {
-    & + & {
-      margin-top: 22px;
-    }
-  }
-  .faqList__q {
-    padding: 10px 15px;
-  }
-  .faqList__qTxt {
-    font-size: 15px;
-    padding-left: 30px;
-
-    &::before {
-      top: -1px;
-      left: 0;
-      width: 22px;
-      height: 22px;
-      margin: auto;
-      padding-top: 1px;
-      font-size: 12px;
-    }
-  }
-  .faqList__a {
-    padding: 18px 15px 18px;
-    border-radius: 12px;
-  }
-  .faqList__aCont {
-    position: relative;
-    padding-left: 30px;
-    font-size: 13px;
-    line-height: 1.71;
-
-    &::before {
-      top: 0;
-      left: 0;
-      width: 22px;
-      height: 22px;
-      font-size: 12px;
-    }
-  }
-}
-
-/*** faqScheduleList ***/
 .faqScheduleList {
-  padding: 13px 20px;
-  background-color: #fff;
+  padding: 18px 20px;
+  background-color: #FFFFFF;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
+
 .faqScheduleList__item {
   display: flex;
   align-items: center;
-  & + & {
-    margin-top: 4px;
+  gap: 0 20px;
+  
+  &+&{
     padding-top: 5px;
-    border-top: dashed 1px #DEDEDE;
+    margin-top: 5px;
+    border-top: 1px dashed  #F5F5F5;
   }
 }
+
 .faqScheduleList__time {
-  margin-right: 15px;
-  min-width: 46px;
+  min-width: 3em;
   font-size: 14px;
   font-weight: 600;
+  font-family: "ヒラギノ角ゴシック";
 }
+
 .faqScheduleList__txt {
   font-size: 14px;
+  font-family: "ヒラギノ角ゴシック";
 }
 
-@include sp {
-  .faqScheduleList {
-    padding: 12px 16px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-  }
-  .faqScheduleList__item {
-    display: flex;
-    align-items: center;
-    & + & {
-      margin-top: 4px;
-      padding-top: 5px;
-    }
-  }
-  .faqScheduleList__time {
-    margin-right: 12px;
-    min-width: 46px;
-    font-size: 12px;
-  }
-  .faqScheduleList__txt {
-    font-size: 12px;
-  }
-}
-
-/*** faqList02 ***/
-.faqList02 {
-  margin-left: -6px;
-  margin-top: 18px;
-  padding: 14px 20px;
-  background-color: #fff;
-  border-radius: 15px;
-}
-.faqList02__item {
-  display: flex;
-  align-items: center;
-  & + & {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: dashed 1px #DEDEDE;
-  }
-}
-.faqList02__ttl {
-  min-width: 32px;
-  margin-right: 38px;
+.faqList__a--note {
   font-size: 14px;
-  font-weight: 600;
-}
-.faqList02__txt {
-  font-size: 14px;
+  font-family: "ヒラギノ角ゴシック";
+  margin-left: 41px;
   line-height: 1.71;
 }
 
-@include sp {
-  .faqList02 {
-    margin-left: -6px;
-    margin-top: 18px;
-    padding: 14px 16px;
-    border-radius: 15px;
-  }
-  .faqList02__item {
-    display: flex;
-    align-items: center;
-    & + & {
-      margin-top: 10px;
-      padding-top: 10px;
-    }
-  }
-  .faqList02__ttl {
-    min-width: 32px;
-    margin-right: 18px;
-    font-size: 13px;
-  }
-  .faqList02__txt {
-    font-size: 12px;
-    line-height: 1.6;
+.belongingsList {
+  padding: 20px;
+  margin-left: 41px;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+}
+
+.belongings{
+  margin-bottom: 22px;
+}
+
+.belongingsList__item {
+  display: flex;
+  align-items: center;
+  gap: 0 42px;
+
+  &+&{
+    margin-top: 16px;
+    padding-top: 16px;
+    border: 1px dashed #F5F5F5;
   }
 }
+
+.belongingsList__season {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.belongingsList__txt {
+  font-size: 14px;
+  font-family: "ヒラギノ角ゴシック";
+  line-height: 1.71;
+}
+
+.faqList__a--link {
+  border-bottom: 1px solid black;
+  position: relative;
+
+  &::after{
+    content: '';
+    background: url(/assets/img/common/ico_link-txt-arrow.svg) no-repeat center;
+    width: 16px;
+    height: 16px;
+    margin: 0 2px -2px;
+    display: inline-block;
+  }
+}
+
+@include sp{
+  .faqArea {
+    padding-bottom: 60px;
+  }
+  
+  .faqList {
+    width: 100%;
+  }
+  
+  .faqList__item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+    &+&{
+      margin-top: 20px;
+    }
+  }
+  
+  .faqList__q {
+    padding: 15px 25px;
+  }
+  
+  .faqList__q--txt {
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 41px;
+    position: relative;
+  
+    &::before{
+      content: 'Q';
+      font-size: 11px;
+      font-weight: bold;
+      font-family: "futura";
+      background-color: #313590;
+      color: #FFFFFF;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: -41px;
+      margin: auto;
+    }
+  }
+  
+  .faqList__a {
+    padding: 15px 25px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+  }
+  
+  .faqList__a--txt {
+    font-size: 12px;
+    font-family: "ヒラギノ角ゴシック";
+    line-height: 1.71;
+    margin-left: 41px;
+    position: relative;
+  
+    &::before{
+      content: 'A';
+      font-size: 11px;
+      font-weight: bold;
+      font-family: "futura";
+      background-color: #903232;
+      color: #FFFFFF;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: -41px;
+      margin: auto;
+    }
+  }
+  
+  .faqScheduleList {
+    padding: 18px 20px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .faqScheduleList__item {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    
+    &+&{
+      padding-top: 5px;
+      margin-top: 5px;
+      border-top: 1px dashed  #F5F5F5;
+    }
+  }
+  
+  .faqScheduleList__time {
+    min-width: 3em;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "ヒラギノ角ゴシック";
+  }
+  
+  .faqScheduleList__txt {
+    font-size: 12px;
+    font-family: "ヒラギノ角ゴシック";
+  }
+  
+  .faqList__a--note {
+    font-size: 12px;
+    font-family: "ヒラギノ角ゴシック";
+    margin-left: 41px;
+    line-height: 1.71;
+  }
+  
+  .belongingsList {
+    padding: 15px 20px;
+    margin-left: 41px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+  }
+  
+  .belongings{
+    margin-bottom: 15px;
+  }
+  
+  .belongingsList__item {
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+  
+    &+&{
+      margin-top: 16px;
+      padding-top: 16px;
+      border: 1px dashed #F5F5F5;
+    }
+  }
+  
+  .belongingsList__season {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .belongingsList__txt {
+    font-size: 12px;
+    font-family: "ヒラギノ角ゴシック";
+    line-height: 1.71;
+  }
+  
+  .faqList__a--link {
+    border-bottom: 1px solid black;
+    position: relative;
+  
+    &::after{
+      content: '';
+      background: url(/assets/img/common/ico_link-txt-arrow.svg) no-repeat center;
+      width: 16px;
+      height: 16px;
+      margin: 0 2px -2px;
+      display: inline-block;
+    }
+  }
+}
+

@@ -3466,343 +3466,285 @@ textarea {
     font-size: 26px;
   }
 }
+/*――――――――――――――――――――――――――――――――――――――――――――
+/* MenuArea
+――――――――――――――――――――――――――――――――――――――――――――――*/
 .menuArea {
   padding-bottom: 120px;
 }
 
-.menuSec + .menuSec {
-  margin-top: 60px;
-  padding-top: 60px;
-  border-top: solid 2px #E8E8E8;
+.menuList__item {
+  padding-bottom: 60px;
+  border-bottom: 3px solid #F4F4F4;
+  margin-bottom: 60px;
 }
-.menuSec .c-ttl01 {
-  margin-bottom: 23px;
+.menuList__item .c-ttl01 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 34px;
 }
-.menuSec .c-ttl01__ja {
-  margin-bottom: 15px;
-  font-size: 12px;
+.menuList__item .c-ttl01__ja {
   font-family: "Futura", "ヒラギノ角ゴシック", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  margin-bottom: 19px;
 }
-.menuSec .c-ttl01__en {
+.menuList__item .c-ttl01__en {
   font-size: 32px;
-  font-family: "ヒラギノ角ゴシック", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 600;
 }
 
-.menuDiving__imgFrame {
-  aspect-ratio: 910/370;
-  width: 100%;
+.menuList__imgBox {
   border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  z-index: 0;
+  width: 100%;
+  height: 370px;
   margin-bottom: 40px;
 }
+.menuList__imgBox img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
 
-.menuDiving__contBox {
+.menuList__contBox {
   display: flex;
-  gap: 0 clamp(40px, 40px + 40 * (100vw - 768px) / 512, 80px);
+  gap: 0 90px;
 }
 
-.menuDiving__txtBox {
-  flex: 1 1 366px;
+.menuList__txtBox {
+  width: 366px;
 }
 
-.menuDiving__lead {
+.menuList__lead {
   font-size: 14px;
-  line-height: 1.785;
+  line-height: 1.78;
+  margin-bottom: 35px;
 }
 
-.menuDiving__link {
-  margin-top: 30px;
-}
-.menuDiving__link + .menuDiving__link {
+.menuList__link + .menuList__link {
   margin-top: 15px;
 }
 
-.menuPrice__box {
-  flex: 1 1 454px;
+.menuList__courseBox {
+  width: 454px;
 }
 
-.menuPrice__ttl {
+.courseBox__ttl {
   font-size: 18px;
   font-weight: 600;
-  margin-top: 3px;
-  margin-bottom: 20px;
+  font-family: "ヒラギノ角ゴシック";
+  margin-bottom: 25px;
 }
-.menuPrice__ttl::before {
+.courseBox__ttl::before {
+  content: " ";
   display: inline-block;
   width: 17px;
   height: 17px;
-  margin: 0 10px -1px 0;
   background-color: #001C10;
   border-radius: 2px;
-  content: "";
+  margin: 0 10px -2px 0;
 }
 
-.menuPriceList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 14px;
-}
-.menuPriceList.row .menuPriceList__item {
-  width: calc((100% - 14px) / 2);
-}
-
-.menuPriceList__item {
+.courseList__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 15px;
-  width: 100%;
-  padding: 20px 25px 19px;
+  gap: 0 30px;
   background-color: #F4F4F4;
   border-radius: 10px;
+  padding: 23px 25px;
+}
+.courseList__item + .courseList__item {
+  margin-top: 12px;
 }
 
-.menuPriceList__name {
+.courseName {
   font-size: 18px;
   font-weight: 600;
 }
-.menuPriceList__name .num {
+
+.coursePrice {
   font-size: 20px;
-}
-.menuPriceList__name .subTxt {
-  display: block;
-  margin-top: 10px;
-  font-size: 12px;
+  font-weight: 600;
 }
 
-.menuPriceList__price {
-  margin-left: auto;
+.yen {
+  font-size: 18px;
+}
+
+.tax {
   font-size: 15px;
-  font-weight: 600;
-}
-.menuPriceList__price .num {
-  font-size: 20px;
-}
-.menuPriceList__price .yen {
-  font-size: 18px;
 }
 
 @media screen and (max-width: 767px) {
   .menuArea {
-    padding-bottom: 50px;
+    padding-bottom: 60px;
   }
-  .menuSec + .menuSec {
-    margin-top: 40px;
-    padding-top: 40px;
+  .menuList__item {
+    padding-bottom: 30px;
+    border-bottom: 3px solid #F4F4F4;
+    margin-bottom: 30px;
   }
-  .menuSec .c-ttl01 {
-    margin-bottom: 18px;
+  .menuList__item .c-ttl01 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
   }
-  .menuSec .c-ttl01__ja {
-    margin-bottom: 5px;
-    font-size: 10px;
-    padding: 3px 9px;
+  .menuList__item .c-ttl01__ja {
+    font-family: "Futura", "ヒラギノ角ゴシック", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    margin-bottom: 10px;
   }
-  .menuSec .c-ttl01__en {
-    font-size: 24px;
+  .menuList__item .c-ttl01__en {
+    font-size: 25px;
+    font-weight: 600;
   }
-  .menuDiving__imgFrame {
-    aspect-ratio: 910/570;
-    border-radius: 15px;
-    margin-bottom: 24px;
+  .menuList__imgBox {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
   }
-  .menuDiving__contBox {
-    display: block;
+  .menuList__imgBox img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
   }
-  .menuDiving__lead {
+  .menuList__contBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .menuList__txtBox {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .menuList__lead {
     font-size: 14px;
-    line-height: 1.785;
+    line-height: 1.78;
+    margin-bottom: 25px;
   }
-  .menuDiving__link {
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
+  .menuList__link {
+    margin: 0 auto;
   }
-  .menuDiving__link + .menuDiving__link {
+  .menuList__link + .menuList__link {
     margin-top: 15px;
   }
-  .menuPrice__box {
-    margin-top: 35px;
-  }
-  .menuPrice__ttl {
-    font-size: 17px;
-    font-weight: 600;
-    margin-top: 3px;
-    margin-bottom: 15px;
-  }
-  .menuPrice__ttl::before {
-    width: 15px;
-    height: 15px;
-    margin: 0 6px -1px 0;
-  }
-  .menuPriceList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 14px;
-  }
-  .menuPriceList.row .menuPriceList__item {
+  .menuList__courseBox {
     width: 100%;
   }
-  .menuPriceList__item {
+  .courseBox__ttl {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "ヒラギノ角ゴシック";
+    margin-bottom: 15px;
+  }
+  .courseBox__ttl::before {
+    content: " ";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-color: #001C10;
+    border-radius: 2px;
+    margin: 0 10px -2px 0;
+  }
+  .courseList__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 8px 15px;
-    width: 100%;
-    padding: 13px 20px 13px;
-    border-radius: 8px;
+    gap: 0 20px;
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    padding: 14px 25px;
   }
-  .menuPriceList__name {
+  .courseList__item + .courseList__item {
+    margin-top: 10px;
+  }
+  .courseName {
     font-size: 14px;
     font-weight: 600;
   }
-  .menuPriceList__name .num {
+  .coursePrice {
     font-size: 16px;
+    font-weight: 600;
   }
-  .menuPriceList__name .subTxt {
-    display: inline;
-    margin-top: 0;
+  .yen {
+    font-size: 14px;
+  }
+  .tax {
     font-size: 11px;
   }
-  .menuPriceList__price {
-    margin-left: auto;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .menuPriceList__price .num {
-    font-size: 16px;
-  }
-  .menuPriceList__price .yen {
-    font-size: 14px;
-  }
 }
-/*** menuSec rental ***/
-.menuSec.rental .c-ttl01 {
-  margin-bottom: 40px;
+/*** Rental ***/
+.menuRentalList {
+  display: flex;
+  gap: 12px 14px;
+  flex-wrap: wrap;
 }
 
-@media screen and (max-width: 767px) {
-  .menuSec.rental .c-ttl01 {
-    margin-bottom: 20px;
-  }
-}
-/*** menuSec reserve ***/
-.menuSec.reserve .c-ttl01 {
-  margin-bottom: 35px;
-}
-.menuSec.reserve .okabanCalendar {
-  padding-top: 0;
-}
-.menuSec.reserve .okabanCalendar .titCalendar {
-  display: none;
-}
-
-.menuReserve__txtBox {
-  flex: 1 1 331px;
-}
-
-.menuReserve__lead {
-  font-size: 15px;
-  line-height: 1.785;
-}
-
-.menuReserve__calender {
-  flex: 1 0 464px;
-}
-
-@media screen and (max-width: 767px) {
-  .menuSec.reserve .c-ttl01 {
-    margin-bottom: 20px;
-  }
-  .menuSec.reserve .okabanCalendar {
-    padding-top: 0;
-  }
-  .menuSec.reserve .okabanCalendar .titCalendar {
-    display: none;
-  }
-  .menuReserve__txtBox {
-    flex: 1 1 331px;
-  }
-  .menuReserve__lead {
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 1.785;
-  }
-  .menuReserve__calender {
-    flex: 1 0 464px;
-  }
-}
-/*** menuSec safet ***/
-.menuSec.safety .c-ttl01 {
-  margin-bottom: 40px;
-}
-
-.menuSafetyList__item {
-  background-color: #F5F5F5;
+.menuRentalList__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 30px;
+  align-items: center;
+  background-color: #F4F4F4;
   border-radius: 10px;
-  padding: 30px clamp(20px, 3.125vw, 40px);
-}
-.menuSafetyList__item + .menuSafetyList__item {
-  margin-top: 30px;
+  padding: 23px 25px;
+  width: calc((100% - 14px) / 2);
 }
 
-.menuSafetyList__ttl {
+.menuRentalList__name {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 17px;
 }
-.menuSafetyList__ttl::before {
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin: 0 10px -1px 0;
-  background-color: #001C10;
-  border-radius: 2px;
-  content: "";
+.menuRentalList__name .detail {
+  font-size: 12px;
 }
 
-.menuSafetyList__txt + .menuSafetyList__txt {
-  margin-top: 15px;
+.menuRentalList__price {
+  font-size: 19px;
+  font-weight: 600;
 }
 
-.menuSafetyList__link {
-  margin-top: 20px;
+.yen {
+  font-size: 17px;
+}
+
+.tax {
+  font-size: 14px;
 }
 
 @media screen and (max-width: 767px) {
-  .menuSec.safety .c-ttl01 {
-    margin-bottom: 18px;
+  .menuRentalList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
   }
-  .menuSafetyList__item {
+  .menuRentalList__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+    align-items: center;
+    background-color: #F4F4F4;
     border-radius: 10px;
-    padding: 25px 20px;
+    padding: 14px 25px;
+    width: 100%;
   }
-  .menuSafetyList__item + .menuSafetyList__item {
-    margin-top: 30px;
-  }
-  .menuSafetyList__ttl {
-    font-size: 17px;
+  .menuRentalList__name {
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 17px;
   }
-  .menuSafetyList__ttl::before {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 6px -1px 0;
-    content: "";
+  .menuRentalList__name .detail {
+    font-size: 8px;
   }
-  .menuSafetyList__txt + .menuSafetyList__txt {
-    margin-top: 15px;
+  .menuRentalList__price {
+    font-size: 16px;
+    font-weight: 600;
   }
-  .menuSafetyList__link {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  .yen {
+    font-size: 14px;
+  }
+  .tax {
+    font-size: 11px;
   }
 }
 /*――――――――――――――――――――――――――――――――――――――――――――
@@ -4371,228 +4313,309 @@ textarea {
   }
 }
 .faqArea {
-  padding-top: 0;
   padding-bottom: 120px;
 }
 
 .faqList {
-  margin-top: -16px;
+  width: 100%;
 }
 
+.faqList__item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .faqList__item + .faqList__item {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .faqList__q {
-  padding: 20px 25px;
+  padding: 25px;
 }
 
-.faqList__qTxt {
+.faqList__q--txt {
   font-size: 18px;
   font-weight: 600;
+  margin-left: 41px;
   position: relative;
-  padding-left: 35px;
 }
-.faqList__qTxt::before {
+.faqList__q--txt::before {
+  content: "Q";
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "futura";
+  background-color: #313590;
+  color: #FFFFFF;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 24px;
-  height: 24px;
+  left: -41px;
   margin: auto;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 600;
-  border-radius: 50%;
-  background-color: #313590;
-  padding-top: 1px;
-  content: "Q";
 }
 
 .faqList__a {
-  padding: 25px 25px 19px;
+  padding: 25px;
   background-color: #F5F5F5;
   border-radius: 20px;
 }
 
-.faqList__aCont {
-  position: relative;
-  padding-left: 36px;
+.faqList__a--txt {
   font-size: 14px;
+  font-family: "ヒラギノ角ゴシック";
   line-height: 1.71;
+  margin-left: 41px;
+  position: relative;
 }
-.faqList__aCont::before {
+.faqList__a--txt::before {
+  content: "A";
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "futura";
+  background-color: #903232;
+  color: #FFFFFF;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 24px;
-  height: 24px;
+  left: -41px;
   margin: auto;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 600;
-  border-radius: 50%;
-  background-color: #903232;
-  content: "A";
 }
 
-@media screen and (max-width: 767px) {
-  .faqArea {
-    padding-top: 0;
-    padding-bottom: 50px;
-  }
-  .faqList {
-    margin-top: -16px;
-  }
-  .faqList__item + .faqList__item {
-    margin-top: 22px;
-  }
-  .faqList__q {
-    padding: 10px 15px;
-  }
-  .faqList__qTxt {
-    font-size: 15px;
-    padding-left: 30px;
-  }
-  .faqList__qTxt::before {
-    top: -1px;
-    left: 0;
-    width: 22px;
-    height: 22px;
-    margin: auto;
-    padding-top: 1px;
-    font-size: 12px;
-  }
-  .faqList__a {
-    padding: 18px 15px 18px;
-    border-radius: 12px;
-  }
-  .faqList__aCont {
-    position: relative;
-    padding-left: 30px;
-    font-size: 13px;
-    line-height: 1.71;
-  }
-  .faqList__aCont::before {
-    top: 0;
-    left: 0;
-    width: 22px;
-    height: 22px;
-    font-size: 12px;
-  }
-}
-/*** faqScheduleList ***/
 .faqScheduleList {
-  padding: 13px 20px;
-  background-color: #fff;
+  padding: 18px 20px;
+  background-color: #FFFFFF;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 
 .faqScheduleList__item {
   display: flex;
   align-items: center;
+  gap: 0 20px;
 }
 .faqScheduleList__item + .faqScheduleList__item {
-  margin-top: 4px;
   padding-top: 5px;
-  border-top: dashed 1px #DEDEDE;
+  margin-top: 5px;
+  border-top: 1px dashed #F5F5F5;
 }
 
 .faqScheduleList__time {
-  margin-right: 15px;
-  min-width: 46px;
+  min-width: 3em;
   font-size: 14px;
   font-weight: 600;
+  font-family: "ヒラギノ角ゴシック";
 }
 
 .faqScheduleList__txt {
   font-size: 14px;
+  font-family: "ヒラギノ角ゴシック";
 }
 
-@media screen and (max-width: 767px) {
-  .faqScheduleList {
-    padding: 12px 16px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-  }
-  .faqScheduleList__item {
-    display: flex;
-    align-items: center;
-  }
-  .faqScheduleList__item + .faqScheduleList__item {
-    margin-top: 4px;
-    padding-top: 5px;
-  }
-  .faqScheduleList__time {
-    margin-right: 12px;
-    min-width: 46px;
-    font-size: 12px;
-  }
-  .faqScheduleList__txt {
-    font-size: 12px;
-  }
+.faqList__a--note {
+  font-size: 14px;
+  font-family: "ヒラギノ角ゴシック";
+  margin-left: 41px;
+  line-height: 1.71;
 }
-/*** faqList02 ***/
-.faqList02 {
-  margin-left: -6px;
-  margin-top: 18px;
-  padding: 14px 20px;
-  background-color: #fff;
+
+.belongingsList {
+  padding: 20px;
+  margin-left: 41px;
+  background-color: #FFFFFF;
   border-radius: 15px;
 }
 
-.faqList02__item {
-  display: flex;
-  align-items: center;
-}
-.faqList02__item + .faqList02__item {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: dashed 1px #DEDEDE;
+.belongings {
+  margin-bottom: 22px;
 }
 
-.faqList02__ttl {
-  min-width: 32px;
-  margin-right: 38px;
+.belongingsList__item {
+  display: flex;
+  align-items: center;
+  gap: 0 42px;
+}
+.belongingsList__item + .belongingsList__item {
+  margin-top: 16px;
+  padding-top: 16px;
+  border: 1px dashed #F5F5F5;
+}
+
+.belongingsList__season {
   font-size: 14px;
   font-weight: 600;
 }
 
-.faqList02__txt {
+.belongingsList__txt {
   font-size: 14px;
+  font-family: "ヒラギノ角ゴシック";
   line-height: 1.71;
 }
 
+.faqList__a--link {
+  border-bottom: 1px solid black;
+  position: relative;
+}
+.faqList__a--link::after {
+  content: "";
+  background: url(/assets/img/common/ico_link-txt-arrow.svg) no-repeat center;
+  width: 16px;
+  height: 16px;
+  margin: 0 2px -2px;
+  display: inline-block;
+}
+
 @media screen and (max-width: 767px) {
-  .faqList02 {
-    margin-left: -6px;
-    margin-top: 18px;
-    padding: 14px 16px;
-    border-radius: 15px;
+  .faqArea {
+    padding-bottom: 60px;
   }
-  .faqList02__item {
+  .faqList {
+    width: 100%;
+  }
+  .faqList__item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .faqList__item + .faqList__item {
+    margin-top: 20px;
+  }
+  .faqList__q {
+    padding: 15px 25px;
+  }
+  .faqList__q--txt {
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 41px;
+    position: relative;
+  }
+  .faqList__q--txt::before {
+    content: "Q";
+    font-size: 11px;
+    font-weight: bold;
+    font-family: "futura";
+    background-color: #313590;
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: -41px;
+    margin: auto;
+  }
+  .faqList__a {
+    padding: 15px 25px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+  }
+  .faqList__a--txt {
+    font-size: 12px;
+    font-family: "ヒラギノ角ゴシック";
+    line-height: 1.71;
+    margin-left: 41px;
+    position: relative;
+  }
+  .faqList__a--txt::before {
+    content: "A";
+    font-size: 11px;
+    font-weight: bold;
+    font-family: "futura";
+    background-color: #903232;
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: -41px;
+    margin: auto;
+  }
+  .faqScheduleList {
+    padding: 18px 20px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+  .faqScheduleList__item {
     display: flex;
     align-items: center;
+    gap: 0 15px;
   }
-  .faqList02__item + .faqList02__item {
-    margin-top: 10px;
-    padding-top: 10px;
+  .faqScheduleList__item + .faqScheduleList__item {
+    padding-top: 5px;
+    margin-top: 5px;
+    border-top: 1px dashed #F5F5F5;
   }
-  .faqList02__ttl {
-    min-width: 32px;
-    margin-right: 18px;
-    font-size: 13px;
-  }
-  .faqList02__txt {
+  .faqScheduleList__time {
+    min-width: 3em;
     font-size: 12px;
-    line-height: 1.6;
+    font-weight: 600;
+    font-family: "ヒラギノ角ゴシック";
+  }
+  .faqScheduleList__txt {
+    font-size: 12px;
+    font-family: "ヒラギノ角ゴシック";
+  }
+  .faqList__a--note {
+    font-size: 12px;
+    font-family: "ヒラギノ角ゴシック";
+    margin-left: 41px;
+    line-height: 1.71;
+  }
+  .belongingsList {
+    padding: 15px 20px;
+    margin-left: 41px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+  }
+  .belongings {
+    margin-bottom: 15px;
+  }
+  .belongingsList__item {
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+  }
+  .belongingsList__item + .belongingsList__item {
+    margin-top: 16px;
+    padding-top: 16px;
+    border: 1px dashed #F5F5F5;
+  }
+  .belongingsList__season {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .belongingsList__txt {
+    font-size: 12px;
+    font-family: "ヒラギノ角ゴシック";
+    line-height: 1.71;
+  }
+  .faqList__a--link {
+    border-bottom: 1px solid black;
+    position: relative;
+  }
+  .faqList__a--link::after {
+    content: "";
+    background: url(/assets/img/common/ico_link-txt-arrow.svg) no-repeat center;
+    width: 16px;
+    height: 16px;
+    margin: 0 2px -2px;
+    display: inline-block;
   }
 }
 .staffArea {
@@ -7697,11 +7720,11 @@ post
 /*――――――――――――――――――――――――――――――――――――――――――――
 /* blogArea
 ――――――――――――――――――――――――――――――――――――――――――――――*/
-.is-active {
+.blogArea .is-active {
   background-color: #3B3333;
   color: #FFFFFF;
 }
-.is-active:hover {
+.blogArea .is-active:hover {
   pointer-events: none;
 }
 
