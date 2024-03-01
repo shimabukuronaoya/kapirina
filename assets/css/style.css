@@ -3507,6 +3507,7 @@ textarea {
 
 .menuList__contBox {
   display: flex;
+  justify-content: space-between;
   gap: 0 90px;
 }
 
