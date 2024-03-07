@@ -98,7 +98,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/header.php"); ?>
           <div class="flowList__contBox">
             <p class="flowList__ttl">ダイビング開始！</p>
             <p class="flowList__txt">
-            水に慣れてきたら水中世界へ！<br>お客様2名につきガイドスタッフが1名付くので安心してお楽しみください。<br>水中でもボードを使って宮古島の海の見所を紹介します！
+            水に慣れてきたら水中世界へ！<br>お客様2名につきガイドスタッフが1名付くので安心してお楽しみください。水中でもボードを使って宮古島の海の見所を紹介します！
             </p>
           </div>
           <div class="flowList__imgBox">
@@ -120,11 +120,78 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/header.php"); ?>
 
 <!-- schedule -->
 <section class="l-section scheduleArea">
-  <div class="l-content --s">
+  <div class="l-content">
     <h2 class="c-ttl01">
       <span class="c-ttl01__ja">スケジュール</span>
       <span class="c-ttl01__en">Schedule</span>
     </h2>
+
+    <ul class="scheduleList">
+      <li class="scheduleList__item">
+        <dl class="scheduleContentList">
+          <div class="scheduleContentList__item">
+            <dt class="scheduleContentList__time">8:00</dt>
+            <dd class="scheduleContentList__txt">
+              <p class="scheduleContentList__txt">宿泊先にお迎え</p>
+            </dd>
+          </div>
+        </dl>
+      </li>
+      <li class="scheduleList__item">
+        <dl class="scheduleContentList">
+          <div class="scheduleContentList__item">
+            <dt class="scheduleContentList__time">8:30</dt>
+            <dd class="scheduleContentList__txtBox">
+              <p class="scheduleContentList__txt">出港</p>
+            </dd>
+          </div>
+        </dl>
+      </li>
+      <li class="scheduleList__item">
+        <dl class="scheduleContentList">
+          <div class="scheduleContentList__item">
+            <dt class="scheduleContentList__time">9:00</dt>
+            <dd class="scheduleContentList__txtBox">
+              <p class="scheduleContentList__txt">シュノーケル＆体験ダイビング<br>(追加ダイビングも含む)</p>
+            </dd>
+          </div>
+        </dl>
+      </li>
+      <li class="scheduleList__item">
+        <dl class="scheduleContentList">
+          <div class="scheduleContentList__item">
+            <dt class="scheduleContentList__time">11:30</dt>
+            <dd class="scheduleContentList__txtBox">
+              <p class="scheduleContentList__txt">ランチ</p>
+            </dd>
+          </div>
+        </dl>
+      </li>
+      <li class="scheduleList__item">
+        <dl class="scheduleContentList">
+          <div class="scheduleContentList__item">
+            <dt class="scheduleContentList__time">12:30</dt>
+            <dd class="scheduleContentList__txtBox">
+              <p class="scheduleContentList__txt">シュノーケル＆体験ダイビング</p>
+            </dd>
+          </div>
+        </dl>
+      </li>
+      <li class="scheduleList__item">
+        <dl class="scheduleContentList">
+          <div class="scheduleContentList__item">
+            <dt class="scheduleContentList__time">14:00</dt>
+            <dd class="scheduleContentList__txtBox">
+              <p class="scheduleContentList__txt">帰港</p>
+            </dd>
+          </div>
+        </dl>
+      </li>
+    </ul>
+    <div class="schedule__txtBox">
+      <p class="schedule__txt">※上記のタイムスケジュールは目安になります。変更もありますのでご了承ください</p>
+    </div>
+
 
     
   </div>
@@ -133,7 +200,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/header.php"); ?>
 
 <!-- menuAbout -->
 <section class="l-section menuAboutArea">
-  <div class="l-content --s">
+  <div class="l-content">
     <div class="c-contentBox l-pd">
       <h2 class="c-ttl01">
         <span class="c-ttl01__ja">メニュー概要</span>
@@ -232,7 +299,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/header.php"); ?>
           </dl>
         </li>
       </ul>
-    </div>  
+      <div class="menuAboutBtnBox"><a href="/contact/" class="c-btn shopRecruit__link">
+      体験ダイビングを予約する</a>
+      </div>
+    </div>
   </div>
 </section>
 <!-- /menuAbout -->
