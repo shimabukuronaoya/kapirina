@@ -58,6 +58,22 @@
   line-height: 1.71;
 }
 
+.funDivingPage{
+
+  .divingAboutList__contBox {
+    gap: 30px 0;
+  }
+
+  .divingAboutList__btnBox{
+  
+    .shopRecruit__link{
+      margin-top: 0;
+    }
+  }
+}
+
+
+
 @include sp{
 
   .divingFirstArea {
@@ -135,100 +151,130 @@
 /*――――――――――――――――――――――――――――――――――――――――――――
 /* benefitsArea
 ――――――――――――――――――――――――――――――――――――――――――――――*/
-.benefitsArea {
-  padding-top: 50px;
-  padding-bottom: 80px;
-
-  .c-ttl01 {
-    margin-bottom: 57px;
-  }
+.benefitsArea{
+  padding-top: 0;
+  padding-bottom: 40px;
 }
 
 .benefitsList {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 45px cl(20, 35);
+  gap: 50px 35px;
+  flex-wrap: wrap;
   counter-reset: number 0;
 }
 
 .benefitsList__item {
-  width: calc((100% - (cl(20, 35)* 2)) / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px 0;
+  width: calc((100% - 70px)/3);
 }
 
 .benefitsList__imgBox {
   border-radius: 20px;
   overflow: hidden;
-  margin-bottom: 18px;
+  aspect-ratio: 240/170;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 }
 
 .benefitsList__txt {
-  display: flex;
-  justify-content: center;
+  color: #303138;
   font-size: 16px;
   font-weight: 600;
+  padding-left: 32px;
+  position: relative;
 
-  &::before {
-    flex-shrink: 0;
+  &::before{
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #303138;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 14px;
-    font-weight: 600;
+    justify-content: center;
+    content: counter(number) '';
+    counter-increment: number 1;
     width: 24px;
     height: 24px;
-    margin: -1px 6px 0 0;
-    font-family: $font-futura;
-    counter-increment: number 1;
-    content: counter(number)'';
+    background-color: #303138;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "futura";
+    position: absolute;
+    top: -2px;
+    left: 0;
   }
+
+
 }
 
-@include sp {
-  .benefitsArea {
-    padding-top: 30px;
-    padding-bottom: 50px;
-
-    .c-ttl01 {
-      margin-bottom: 30px;
-    }
-  }
+@include sp{
 
   .benefitsList {
     display: flex;
-    flex-wrap: wrap;
-    gap: 40px 15px;
-  }
-
-  .benefitsList__item {
-    width: calc((100% - (15px * 1)) / 2);
-
-  }
-
-  .benefitsList__imgBox {
-    border-radius: 15px;
-    overflow: hidden;
-    margin-bottom: 15px;
-  }
-
-  .benefitsList__txt {
-    display: flex;
     justify-content: center;
-    font-size: 15px;
-    font-weight: 600;
-
-    &::before {
-      font-size: 11px;
-      width: 20px;
-      height: 20px;
-      margin: 1px 4px 0 0;
-      padding: 1px 0 0 0;
+    gap: 50px 35px;
+    flex-wrap: wrap;
+    counter-reset: number 0;
+  }
+  
+  .benefitsList__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+    width: calc((100% - 70px)/3);
+  }
+  
+  .benefitsList__imgBox {
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 240/170;
+  
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
+  
+  }
+  
+  .benefitsList__txt {
+    color: #303138;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 32px;
+    position: relative;
+  
+    &::before{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      content: counter(number) '';
+      counter-increment: number 1;
+      width: 24px;
+      height: 24px;
+      background-color: #303138;
+      border-radius: 50%;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: bold;
+      font-family: "futura";
+      position: absolute;
+      top: -2px;
+      left: 0;
+    }
+  
   }
 }
+
+
 
 
 /*――――――――――――――――――――――――――――――――――――――――――――
@@ -247,14 +293,18 @@
   }
 }
 
+.scheduleListBox{
+  display: flex;
+  gap: 0 14px;
+}
+
 .scheduleList {
   width: 390px;
-  margin: 0 auto 45px;
+  margin: 0 auto;
   flex-shrink: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px 0;
-
+  gap: 10px 14px;
 }
 
 .scheduleList__item {
@@ -289,7 +339,8 @@
     z-index: 1;
   }
 
-  &:first-child::after{
+
+  &:first-of-type::after{
     content: '';
     display: block;
     position: absolute;
@@ -346,7 +397,7 @@
 }
 
 .schedule__txtBox {
-
+  margin-top: 45px;
 }
 
 .schedule__txt {
@@ -364,10 +415,16 @@
       margin-bottom: 30px;
     }
   }
+
+  .scheduleListBox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px 14px;
+  }
   
   .scheduleList {
     width: 100%;
-    margin: 0 auto 35px;
+    margin: 0 auto;
     flex-shrink: 1;
     display: flex;
     flex-direction: column;
@@ -466,6 +523,7 @@
   .schedule__txtBox {
     display: flex;
     justify-content: center;
+    margin-top: 35px;
   }
   
   .schedule__txt {
@@ -526,6 +584,10 @@
   .c-txtDot+.c-txtDot{
       margin-top: 3px;
   }
+
+  .note{
+    margin-top: 15px;
+  }
 }
 
 .menuAboutContentList__txt {
@@ -544,6 +606,10 @@
     margin: 0 2px -2px;
     display: inline-block;
   }
+
+  &:hover{
+    border: none;
+  }
 }
 
 .yen {
@@ -557,6 +623,8 @@
   font-size: 14px;
   font-weight: 600;
 }
+
+
 
 @include sp{
   .menuAboutArea{
@@ -603,6 +671,10 @@
     .c-txtDot+.c-txtDot{
         margin-top: 3px;
     }
+
+    .note{
+      margin-top: 10px;
+    }
   }
   
   .menuAboutContentList__txt {
@@ -620,6 +692,10 @@
       height: 16px;
       margin: 0 2px -2px;
       display: inline-block;
+    }
+
+    &:hover{
+      border: none;
     }
   }
   
@@ -875,3 +951,4 @@
 }
 
 
+    
