@@ -20,6 +20,7 @@
 
 .divingAboutList__item {
   display: flex;
+  align-items: center;
   gap: 0 60px;
 
   &+:nth-child(2n){
@@ -315,7 +316,7 @@
   flex-direction: column;
   gap: 10px 14px;
 
-  &:first-of-type .scheduleList__item:last-child::after{
+  &:first-of-type .scheduleList__item:first-child::after{
     content: '';
     display: block;
     position: absolute;
@@ -327,14 +328,14 @@
     z-index: 1;
   }
 
-  &:last-of-type .scheduleList__item:first-child::after{
+  &:last-of-type .scheduleList__item:last-child::after{
     content: '';
     display: block;
     position: absolute;
     top: 0;
     left: 36px;
     width: 4px;
-    height: 70px;
+    height: 28px;
     background-color: #DBDBDB;
     z-index: 1;
   }
@@ -383,7 +384,7 @@
     top: 0;
     left: 36px;
     width: 4px;
-    height: 28px;
+    height: 67px;
     background-color: #DBDBDB;
     z-index: 1;
   }
@@ -392,10 +393,10 @@
     content: '';
     display: block;
     position: absolute;
-    top: 44px;
+    top: 2px;
     left: 36px;
     width: 4px;
-    height: 70px;
+    height: 95px;
     background-color: #DBDBDB;
     z-index: 1;
   }
@@ -465,6 +466,30 @@
     display: flex;
     flex-direction: column;
     gap: 10px 0;
+
+    &:first-of-type .scheduleList__item:first-child::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 31px;
+      left: 21px;
+      width: 4px;
+      height: 45px;
+      background-color: #DBDBDB;
+      z-index: 1;
+    }
+  
+    &:last-of-type .scheduleList__item:last-child::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 21px;
+      width: 4px;
+      height: 28px;
+      background-color: #DBDBDB;
+      z-index: 1;
+    }
   
   }
   
@@ -504,10 +529,10 @@
       content: '';
       display: block;
       position: absolute;
-      top: 31px;
-      left: 21px;
-      width: 4px;
-      height: 45px;
+      top: -30px;
+    left: 21px;
+    width: 4px;
+    height: 110px;
       background-color: #DBDBDB;
       z-index: 1;
     }
