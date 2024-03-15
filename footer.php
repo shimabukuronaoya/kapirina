@@ -55,7 +55,7 @@
   
   <div class="footerInfo l-pd">
     <div class="l-content">
-      <div class="footerInfo__top">
+      <div class="footerInfoTop">
         <a href="/" class="footerInfoLogo">
           <img class="footerInfoLogo__img" src="/assets/img/common/logo_white.png" alt="">
         </a>
@@ -88,9 +88,21 @@
           <img src="/assets/img/common/ico_pagetop.svg" alt="" class="pageTop__icon">
         </a>
       </div>
+      <div class="footerInfoBottom">
+        <ul class="footerNavList">
+          <li class="footerNavList__itme"><a href="#" class="footerNavList__link">お問い合わせ</a>
+          </li>
+          <li class="footerNavList__itme"><a href="#" class="footerNavList__link">個人情報保護方針</a>
+          </li>
+          <li class="footerNavList__itme"><a href="#" class="footerNavList__link">会社概要</a>
+          </li>
+        </ul>
+        <p class="footerInfoBottom__copy">&copy;Kapilina</p>
+      </div>
     </div>
-
   </div>
+
+  <div class="footerBitknot"><a href="https://bitknot.co.jp/" target="_blank"><img src="/assets/img/common/logo_bitknot.svg" alt="" class="footerBitknot__img"></a></div>
 
   <!-- <div class="footerInfo l-pd">
     <div class="l-content">

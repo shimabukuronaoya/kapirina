@@ -1656,6 +1656,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .footerPayment__txt {
@@ -1672,9 +1673,13 @@ textarea {
   padding: 51px 60px;
 }
 
-.footerInfo__top {
+.footerInfoTop {
   display: flex;
   flex-direction: column;
+  position: relative;
+  padding-bottom: 71px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .footerInfoLogo {
@@ -1686,6 +1691,7 @@ textarea {
 .footerInfoSnsList {
   display: flex;
   gap: 0 19px;
+  margin-bottom: 18px;
 }
 
 .instagram .footerInfoSnsList__img {
@@ -1698,6 +1704,98 @@ textarea {
 
 .line .footerInfoSnsList__img {
   width: 26.05px;
+}
+
+.footerInfoList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px 0;
+}
+
+.footerInfoList__item {
+  font-size: 12px;
+  font-weight: 300;
+  color: #FFFFFF;
+}
+
+.address {
+  position: relative;
+  padding-left: 14px;
+}
+.address::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 16px;
+  background: url(/assets/img/common/ico_map.svg);
+}
+
+.tel {
+  position: relative;
+  padding-left: 14px;
+}
+.tel::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 13px;
+  background: url(/assets/img/common/ico_tel.svg);
+}
+
+.pageTop {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.footerInfoBottom {
+  position: relative;
+}
+
+.footerNavList {
+  display: flex;
+  gap: 0 30px;
+}
+
+.footerNavList__itme {
+  font-size: 12px;
+  color: #fff;
+  position: relative;
+}
+.footerNavList__itme + .footerNavList__itme::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+  bottom: 0;
+  width: 1px;
+  height: 12px;
+  margin: auto;
+  background-color: #fff;
+  transform: rotate(28deg);
+}
+
+.footerInfoBottom__copy {
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.footerBitknot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 46px;
+  background-color: #FFFFFF;
 }
 
 /*** footerContact ***/
