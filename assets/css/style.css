@@ -1552,6 +1552,7 @@ textarea {
   position: relative;
   z-index: 2;
 }
+
 /*** footerContact ***/
 .footerContact {
   display: flex;
@@ -1677,9 +1678,6 @@ textarea {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-bottom: 71px;
-  margin-bottom: 28px;
-  border-bottom: 1px solid #FFFFFF;
 }
 
 .footerInfoLogo {
@@ -1755,7 +1753,12 @@ textarea {
 }
 
 .footerInfoBottom {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  margin-top: 71px;
+  border-top: 1px solid #FFFFFF;
 }
 
 .footerNavList {
@@ -1785,9 +1788,7 @@ textarea {
 .footerInfoBottom__copy {
   font-size: 12px;
   color: #fff;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  text-align: right;
 }
 
 .footerBitknot {
@@ -1798,7 +1799,282 @@ textarea {
   background-color: #FFFFFF;
 }
 
-/*** footerContact ***/
+@media screen and (max-width: 767px) {
+  .footerContact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 0;
+  }
+  .footerContact::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/assets/img/common/bg_footer-contact.svg) center center;
+    opacity: 0.02;
+    z-index: -1;
+  }
+  .footerContact .c-ttl01 {
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .footerContact .c-ttl01__ja {
+    background-color: #fff;
+    color: #303138;
+  }
+  .footerContact .c-ttl01__en {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .footerContact_cont {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .footerSns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    padding: 0;
+  }
+  .footerSnsList {
+    display: flex;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    gap: 0 36px;
+  }
+  .footerSnsList__item {
+    position: relative;
+  }
+  .footerSnsList__item + .footerSnsList__item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -18px;
+    bottom: 0;
+    width: 1px;
+    height: 22px;
+    margin: auto;
+    background-color: #fff;
+    transform: rotate(28deg);
+  }
+  .footerSnsList__txt {
+    color: #FFFFFF;
+    font-size: 13px;
+    line-height: 1.57;
+    text-align: center;
+  }
+  .footerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    border-left: 0;
+  }
+  .footerForm .c-btn {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  /*** footerPayment ***/
+  .footerPayment {
+    background-color: #FFFFFF;
+    padding: 14px 20px;
+  }
+  .footerPayment__cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .footerPayment__txt {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .footerPayment__img {
+    max-width: 320px;
+  }
+  /*** footerInfo ***/
+  .footerInfo {
+    padding: 40px 20px;
+  }
+  .footerInfoTop {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .footerInfoLogo {
+    display: block;
+    width: 140px;
+    margin-bottom: 20px;
+  }
+  .footerInfoSnsList {
+    display: flex;
+    gap: 0 19px;
+    margin-bottom: 18px;
+  }
+  .instagram .footerInfoSnsList__img {
+    width: 22.87px;
+  }
+  .facebook .footerInfoSnsList__img {
+    width: 21.53px;
+  }
+  .line .footerInfoSnsList__img {
+    width: 26.05px;
+  }
+  .footerInfoList {
+    display: flex;
+    flex-direction: column;
+    gap: 14px 0;
+  }
+  .footerInfoList__item {
+    font-size: 12px;
+    font-weight: 300;
+    color: #FFFFFF;
+  }
+  .address {
+    position: relative;
+    padding-left: 14px;
+  }
+  .address::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11px;
+    height: 16px;
+    background: url(/assets/img/common/ico_map.svg);
+  }
+  .tel {
+    position: relative;
+    padding-left: 14px;
+  }
+  .tel::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 13px;
+    background: url(/assets/img/common/ico_tel.svg);
+  }
+  .pageTop {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .footerInfoBottom {
+    padding-top: 25px;
+    margin-top: 25px;
+    border-top: 1px solid #FFFFFF;
+  }
+  .footerNavList {
+    display: flex;
+    gap: 0 20px;
+  }
+  .footerNavList__itme {
+    font-size: 12px;
+    color: #fff;
+    position: relative;
+  }
+  .footerNavList__itme + .footerNavList__itme::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    bottom: 0;
+    width: 1px;
+    height: 12px;
+    margin: auto;
+    background-color: #fff;
+    transform: rotate(28deg);
+  }
+  .footerInfoBottom__copy {
+    font-size: 12px;
+    color: #fff;
+  }
+  .footerBitknot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    background-color: #FFFFFF;
+  }
+}
+.testArea {
+  width: 100%;
+  background-color: #F7F7F7;
+  padding: 30px;
+}
+
+.button {
+  font-size: 14px;
+  font-weight: 600;
+  width: 245px;
+  background-color: #FFFFFF;
+  padding: 16px 69px 17px 64px;
+  border: 1px solid #303138;
+  border-radius: 0 5px 5px 5px;
+  position: relative;
+  opacity: 1;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #303138;
+  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 23px;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  width: 12px;
+  height: 12px;
+  -webkit-mask-image: url(/assets/img/common/ico_window.svg);
+          mask-image: url(/assets/img/common/ico_window.svg);
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  background-color: #303138;
+}
+.button:hover {
+  background-color: #303138;
+  color: #FFFFFF;
+  opacity: 1;
+  transition: 0.3;
+}
+.button:hover::before {
+  background-color: #FFFFFF;
+}
+.button:hover::after {
+  background-color: #FFFFFF;
+}
+
 /*** コンテナ ***/
 .container {
   width: 100%;
