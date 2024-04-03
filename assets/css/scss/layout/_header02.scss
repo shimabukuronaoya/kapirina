@@ -340,6 +340,7 @@
   padding: 0 25px 0;
   background-color: #F4F4F4;
   display: flex;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -347,11 +348,18 @@
 .headerInner{
   padding-top: 60px;
   padding-bottom: 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 
   .c-btn{
     min-width: 200px;
-    margin-top: 23px;
+    margin-top: auto;
   }
+}
+
+.headerInner > *{
+  flex-shrink: 0;
 }
 
 .headerLogo {
@@ -463,7 +471,8 @@
 }
 
 .headerSns {
-  padding-top: 23px;
+  margin-top: 23px;
+  margin-bottom: 23px;
   display: flex;
   flex-direction: column;
   align-items: center;

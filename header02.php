@@ -35,8 +35,8 @@
       <h1 class="headerTopSp__logo"><a href="/" class="headerTopSp__logoLink"><img src="/assets/img/common/logo_no-txt.png" alt="Kapilina" class="headerTopSp__logoImg"></a></h1>
 
       <a role="button" class="headerMenuBtn open js-headerMenuOpen">
-        <img src="/assets/img/common/ico_menu-open.svg" alt=""> -->
-      </a>
+        <img src="/assets/img/common/ico_menu-open.svg" alt="">
+      </a> -->
     </div>
     <script>
     jQuery(function($) {
@@ -170,4 +170,6 @@
       </div>
     </header>
 
-    <div class="l-mainContainer">
+    <div class="l-mainContainer"></div>
+</body>
+</html>

@@ -1245,24 +1245,13 @@ textarea {
 /*――――――――――――――――――――――――――――――――――――――――――――
 /* レイアウトに関するcss
 ――――――――――――――――――――――――――――――――――――――――――――――*/
-.headerTopSp {
-  display: none;
-}
-
-.headerMenuBtn {
-  display: none;
-}
-
-.headerMenuBtn.close {
-  display: none;
-}
-
 .header {
   max-width: 250px;
   height: 100%;
   padding: 0 25px 0;
   background-color: #F4F4F4;
   display: flex;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -1270,10 +1259,17 @@ textarea {
 .headerInner {
   padding-top: 60px;
   padding-bottom: 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 .headerInner .c-btn {
   min-width: 200px;
-  margin-top: 23px;
+  margin-top: auto;
+}
+
+.headerInner > * {
+  flex-shrink: 0;
 }
 
 .headerLogo {
@@ -1366,7 +1362,8 @@ textarea {
 }
 
 .headerSns {
-  padding-top: 23px;
+  margin-top: 23px;
+  margin-bottom: 23px;
   display: flex;
   flex-direction: column;
   align-items: center;
