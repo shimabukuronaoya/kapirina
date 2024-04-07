@@ -67,14 +67,18 @@
         </h1>
 
 
+        
+
         <script>
-        jQuery(function($) {
-          $('.headerNavList__item.has-subList .headerNavList__link').on('click', function() {
-            $(this).toggleClass('is-active');
-            $(this).next().stop().slideToggle();
-          });
-        });
+          jQuery(function($) {
+            $('.headerNavList__item.has-subList .headerNavList__link').on('click',function() {
+              $(this).toggleClass('is-active');
+              $(this).next().stop().slideToggle();
+            })
+          })
         </script>
+
+
         <!-- <nav class="headerNav">
           <ul class="headerNavList">
             <li class="headerNavList__item menu has-subList">
@@ -107,8 +111,14 @@
 
         <nav class="headerNav">
           <ul class="headerNavList">
-            <li class="headerNavList__item menu"><a href="/
-            " class="headerNavList__link">メニュー</a>
+            <li class="headerNavList__item menu has-subList"><a class="headerNavList__link">メニュー</a>
+            <ul class="headerNavSubList">
+              <li class="headerNavSubList__item"><a href="/menu/" class="headerNavSubList__link">メニュー一覧</a></li>
+              <li class="headerNavSubList__item"><a href="/menu/fundiving/" class="headerNavSubList__link">ボートファンダイビング</a></li>
+              <li class="headerNavSubList__item"><a href="/menu/trialdiving/" class="headerNavSubList__link">ボート体験ダイビング</a></li>
+              <li class="headerNavSubList__item"><a href="/menu/owd/" class="headerNavSubList__link">オープンウォーターコース</a></li>
+              <li class="headerNavSubList__item"><a href="/menu/aowd/" class="headerNavSubList__link">アドバンスコース</a></li>
+            </ul>
             </li>
             <li class="headerNavList__item shop">
             <a href="/shop

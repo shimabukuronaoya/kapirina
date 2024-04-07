@@ -385,90 +385,105 @@
 }
 
 .headerNavList__item {
-  padding-left: 41px;
   padding-bottom: 20px;
   padding-top: 20px;
   border-bottom: 1px dashed #BCBCBC;
 }
 
 .headerNavList__link{
+  display: block;
+  padding-left: 41px;
   font-size: 14px;
   font-weight: 600;
   position: relative;
 
-
   .headerNavList__item.menu &::before{
-      content: '';
-      position: absolute;
-      top: -1px;
-      left: -41px;
-      width: 24px;
-      height: 18px;
-      background: url(../img/common/ico_gnav-menu.svg) no-repeat center;
-      display: block;
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 24px;
+    height: 18px;
+    background: url(../img/common/ico_gnav-menu.svg) no-repeat center;
+    display: block;
   }
-  .headerNavList__item.menu &::after{
-      content: '';
-      position: absolute;
-      top: 1px;
-      right: -82px;
-      width: 12px;
-      height: 12px;
-      background: url(../img/common/ico_plus.svg) no-repeat center;
-      display: block;
+  .headerNavList__item.has-subList &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    background: url(../img/common/ico_plus.svg) no-repeat center;
+    display: block;
   }
-
+  
+  .headerNavList__item.has-subList &.is-active::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    background: url(../img/common/ico_minus.svg) no-repeat center;
+    display: block;
+  }
+  
   .headerNavList__item.shop &::before{
-      content: '';
-      position: absolute;
-      top: -3px;
-      left: -41px;
-      width: 25px;
-      height: 22px;
-      background: url(../img/common/ico_gnav-shop.svg) no-repeat center;
-      display: block;
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 25px;
+    height: 22px;
+    background: url(../img/common/ico_gnav-shop.svg) no-repeat center;
+    display: block;
   }
   .headerNavList__item.faq &::before{
-      content: '';
-      position: absolute;
-      top: -4px;
-      left: -41px;
-      width: 26px;
-      height: 26px;
-      background: url(../img/common/ico_gnav-faq.svg) no-repeat center;
-      display: block;
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    background: url(../img/common/ico_gnav-faq.svg) no-repeat center;
+    display: block;
   }
   .headerNavList__item.map &::before{
-      content: '';
-      position: absolute;
-      top: -6px;
-      left: -41px;
-      width: 26px;
-      height: 26px;
-      background: url(../img/common/ico_gnav-map.svg) no-repeat center;
-      display: block;
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    background: url(../img/common/ico_gnav-map.svg) no-repeat center;
+    display: block;
   }
   .headerNavList__item.blog &::before{
-      content: '';
-      position: absolute;
-      top: -6px;
-      left: -41px;
-      width: 26px;
-      height: 26px;
-      background: url(../img/common/ico_gnav-blog.svg) no-repeat center;
-      display: block;
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    background: url(../img/common/ico_gnav-blog.svg) no-repeat center;
+    display: block;
   }
   .headerNavList__item.recruit &::before{
-      content: '';
-      position: absolute;
-      top: -6px;
-      left: -41px;
-      width: 26px;
-      height: 26px;
-      background: url(../img/common/ico_gnav-recruit.svg) no-repeat center;
-      display: block;
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    background: url(../img/common/ico_gnav-recruit.svg) no-repeat center;
+    display: block;
   }
 }
+
+
 
 .headerSns {
   margin-top: 23px;
@@ -510,6 +525,46 @@
 .headerSns__link {
 
 }
+
+/*** headerNavSubList ***/
+
+.headerNavSubList {
+  display: none;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.headerNavSubList__item {
+
+  &+&{
+    margin-top: 5px;
+  }
+}
+
+.headerNavSubList__link {
+  font-size: 12px;
+  padding: 5px 0 5px 13px;
+  position: relative;
+  display: block;
+
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #303138;
+    border-right: 2px solid #303138;
+    transform: rotate(45deg);
+  }
+}
+
+
 
 
 
