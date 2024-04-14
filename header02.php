@@ -29,7 +29,24 @@
 <body class="<?= $body_class; ?>">
 
   <div class="l-bodyContainer">
-    <span class="headerMenu__overlay"></span>
+    <div class="headerSp l-pd">
+      <h1 class="headerLogoSp">
+        <a href="/" class="headerLogoSp__link">
+          <img src="/assets/img/common/img_headerlogo-sp.png" alt="" class="headerLogoSp__img">
+        </a>
+      </h1>
+
+      <a role="button" class="headerMenuSp open js-headerMenuOpen is-open">
+        <img src="/assets/img/common/ico_btn-open.svg" alt="" class="headerMenuSp__img">
+      </a>
+
+    </div>
+
+    
+
+
+
+    <!-- <span class="headerMenu__overlay"></span> -->
 
     <!-- <div class="headerTopSp l-pd">
       <h1 class="headerTopSp__logo"><a href="/" class="headerTopSp__logoLink"><img src="/assets/img/common/logo_no-txt.png" alt="Kapilina" class="headerTopSp__logoImg"></a></h1>
@@ -37,37 +54,35 @@
       <a role="button" class="headerMenuBtn open js-headerMenuOpen">
         <img src="/assets/img/common/ico_menu-open.svg" alt="">
       </a> -->
+      
     </div>
-    <script>
-    jQuery(function($) {
-      $('.js-headerMenuOpen').on('click', function() {
-        $('.header').toggleClass('is-open');
-        $('.headerMenu__overlay').toggleClass('is-active');
-      });
-      $('.js-headerMenuClose').on('click', function() {
-        $('.header').removeClass('is-open');
-        $('.headerMenu__overlay').removeClass('is-active');
-      });
-      $('.headerMenu__overlay').on('click', function() {
-        $('.header').removeClass('is-open');
-        $(this).removeClass('is-active');
-      });
-    });
-    </script>
+    
 
     <header class="header">
       <!-- <a role="button" class="headerMenuBtn close js-headerMenuClose">
         <img src="/assets/img/common/ico_menu-close.svg" alt="">
       </a> -->
+
+      <a role="button" class="headerMenuSp close js-headerMenuClose">
+        <img src="/assets/img/common/ico_btn-close.svg" alt="" class="headerMenuSp__img">
+      </a>
+
       <div class="headerInner">
         <h1 class="headerLogo">
           <a href="/" class="headerLogo__link">
             <img src="/assets/img/common/logo.png" alt="宮古島ダイビングショップ カピリナ" class="headerLogo__img">
           </a>
         </h1>
-
-
         
+        <script>
+      jQuery(function($){
+        $('.headerMenuSp').on('click',function(){
+          $('.header').toggleClass('is-open');
+          $('.js-headerMenuOpen').toggleClass('is-open');
+          $('.js-headerMenuClose').toggleClass('is-open');
+        })
+      })
+    </script>
 
         <script>
           jQuery(function($) {
@@ -77,37 +92,6 @@
             })
           })
         </script>
-
-
-        <!-- <nav class="headerNav">
-          <ul class="headerNavList">
-            <li class="headerNavList__item menu has-subList">
-              <a role="button" class="headerNavList__link">メニュー</a>
-              <ul class="headerNavListSub">
-                <li class="headerNavListSub__item"><a href="/menu/" class="headerNavListSub__link">メニュー一覧</a></li>
-                <li class="headerNavListSub__item"><a href="/menu/fundiving/" class="headerNavListSub__link">ボートファンダイビング</a></li>
-                <li class="headerNavListSub__item"><a href="/menu/trialdiving/" class="headerNavListSub__link">ボート体験ダイビング</a></li>
-                <li class="headerNavListSub__item"><a href="/menu/owd/" class="headerNavListSub__link">オープンウォーターコース</a></li>
-                <li class="headerNavListSub__item"><a href="/menu/aowd/" class="headerNavListSub__link">アドバンスコース</a></li>
-              </ul>
-            </li>
-            <li class="headerNavList__item shop">
-              <a href="/shop/" class="headerNavList__link">ショップ紹介</a>
-            </li>
-            <li class="headerNavList__item faq">
-              <a href="/shop/faq/" class="headerNavList__link">FAQ</a>
-            </li>
-            <li class="headerNavList__item map">
-              <a href="/divingmap/" class="headerNavList__link">ダイビングマップ</a>
-            </li>
-            <li class="headerNavList__item blog">
-              <a href="/blog/" class="headerNavList__link">海ブログ</a>
-            </li>
-            <li class="headerNavList__item recruit">
-              <a href="/shop/recruit/" class="headerNavList__link">求人情報</a>
-            </li>
-          </ul>
-        </nav> -->
 
         <nav class="headerNav">
           <ul class="headerNavList">
