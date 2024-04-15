@@ -1281,6 +1281,7 @@ textarea {
 .headerMenuSp {
   position: absolute;
   display: none;
+  z-index: 100;
 }
 .headerMenuSp.open {
   top: 17px;

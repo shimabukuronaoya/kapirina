@@ -32,12 +32,12 @@
     <div class="headerSp l-pd">
       <h1 class="headerLogoSp">
         <a href="/" class="headerLogoSp__link">
-          <img src="/assets/img/common/img_headerlogo-sp.png" alt="" class="headerLogoSp__img">
+          <img src="/assets/img/dummy/img_headerlogo-sp.png" alt="" class="headerLogoSp__img">
         </a>
       </h1>
 
       <a role="button" class="headerMenuSp open js-headerMenuOpen is-open">
-        <img src="/assets/img/common/ico_btn-open.svg" alt="" class="headerMenuSp__img">
+        <img src="/assets/img/dummy/ico_btn-open.svg" alt="" class="headerMenuSp__img">
       </a>
 
     </div>
@@ -64,7 +64,7 @@
       </a> -->
 
       <a role="button" class="headerMenuSp close js-headerMenuClose">
-        <img src="/assets/img/common/ico_btn-close.svg" alt="" class="headerMenuSp__img">
+        <img src="/assets/img/dummy/ico_btn-close.svg" alt="" class="headerMenuSp__img">
       </a>
 
       <div class="headerInner">
