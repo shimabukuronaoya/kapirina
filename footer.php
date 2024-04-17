@@ -104,10 +104,6 @@
 
   <div class="footerBitknot"><a href="https://bitknot.co.jp/" target="_blank"><img src="/assets/img/common/logo_bitknot.svg" alt="" class="footerBitknot__img"></a></div>
 
-  <div class="testArea">
-  <a href="#" class="button">予約専用フォーム</a>
-  </div>
-
 
 </div> <!-- /l-mainContainer -->
 </div> <!-- /l-bodyContainer -->

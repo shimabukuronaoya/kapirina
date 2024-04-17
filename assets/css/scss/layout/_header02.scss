@@ -671,6 +671,19 @@
     display: block;
   }
 
+  .headerInner{
+    padding-top: 60px;
+    padding-bottom: 25px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  
+    .c-btn{
+      min-width: 200px;
+      margin-top: auto;
+    }
+  }
 }
 
 
