@@ -28,6 +28,8 @@
 
 <body class="<?= $body_class; ?>">
 
+<span class="headerMenu__overlay"></span>
+
   <div class="l-bodyContainer">
     <div class="headerSp l-pd">
       <h1 class="headerLogoSp">
@@ -46,7 +48,7 @@
 
 
 
-    <!-- <span class="headerMenu__overlay"></span> -->
+    <span class="headerMenu__overlay"></span>
 
     <!-- <div class="headerTopSp l-pd">
       <h1 class="headerTopSp__logo"><a href="/" class="headerTopSp__logoLink"><img src="/assets/img/common/logo_no-txt.png" alt="Kapilina" class="headerTopSp__logoImg"></a></h1>
@@ -80,6 +82,18 @@
           $('.header').toggleClass('is-open');
           $('.js-headerMenuOpen').toggleClass('is-open');
           $('.js-headerMenuClose').toggleClass('is-open');
+          $('.headerMenu__overlay').toggleClass('is-active');
+        })
+      })
+    </script>
+
+    <script>
+      jQuery(function($){
+        $('.headerMenu__overlay').on('click',function(){
+          $(this).removeClass('is-active');
+          $('.header').removeClass('is-open');
+          $('.js-headerMenuOpen').removeClass('is-open');
+          
         })
       })
     </script>
