@@ -90,7 +90,7 @@
     <script>
       jQuery(function($){
         $('.headerMenu__overlay').on('click',function(){
-          $(this).removeClass('is-active');
+          $('.headerMenu__overlay').removeClass('is-active');
           $('.header').removeClass('is-open');
           $('.js-headerMenuOpen').removeClass('is-open');
           
@@ -140,16 +140,7 @@
             </li>
           </ul>
         </nav>
-        
-
-        <!-- <div class="headerSns">
-          <p class="headerSns__ttl"><img src="/assets/img/common/txt_sns-followus.svg" alt="Follow us!!"></p>
-          <ul class="headerSnsList">
-            <li class="headerSnsList__item"><a href="https://www.instagram.com/kapilina_miyakojima_diving/" target="_blank" class="headerSnsList__link"><img src="/assets/img/common/ico_sns-instagram.svg" alt="" class="headerSnsList__img"></a></li>
-            <li class="headerSnsList__item"><a href="https://ja-jp.facebook.com/miyakojima.kapilina/" target="_blank" class="headerSnsList__link"><img src="/assets/img/common/ico_sns-facebook.svg" alt="" class="headerSnsList__img"></a></li>
-            <li class="headerSnsList__item"><a href="https://page.line.me/953lutzq?openQrModal=true" target="_blank" class="headerSnsList__link"><img src="/assets/img/common/ico_sns-line.svg" alt="" class="headerSnsList__img"></a></li>
-          </ul>
-        </div> -->
+  
 
         <div class="headerSns">
           <p class="headerSns__followUs">

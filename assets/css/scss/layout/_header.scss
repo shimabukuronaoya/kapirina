@@ -701,6 +701,7 @@
     .headerMenuSp {
 
       z-index: 100;
+      display: block;
 
       &.close{
         top: 17px;
@@ -762,6 +763,7 @@
   
     .is-open{
       display: block;
+      transition: 0.3s;
     }
   
     

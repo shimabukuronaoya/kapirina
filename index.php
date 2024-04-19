@@ -43,21 +43,21 @@ require_once("header.php"); ?>
 
       <script>
         jQuery(function($) {
-          $('.memorialPhotoList.right').slick({
-            autoplay: true,
-            autoplaySpeed: 0,
-            speed: 8000,
-            cssEase: 'linear',
-            arrows: false,
-            swipe: false,
-            pauseOnFocus: false,
-            pauseOnHover: false,
-            centerMode: true,
-            variableWidth: true,
-            rtl: true,
+          $('.slidePhotoList.left').slick({
+            autoplay: true, // 自動でスクロール
+            autoplaySpeed: 0, // 自動再生のスライドが切り替わってから次に動き出すまでの時間
+            speed: 8000, // スライド切り替えの時間
+            cssEase: "linear", // スライドの流れ方を等速に設定
+            swipe: false, // 操作による切り替えはさせない
+            arrows: false, // 矢印非表示
+            pauseOnFocus: false, // スライダーをフォーカスした時にスライドを停止させるか
+            pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
+            slidesToShow: 3, // 表示するスライドの枚数
+            centerMode: true, // スライドを中心に表示して、前後のスライドが部分的に見れる
+            variableWidth: true, // スライドの要素の幅をcssで設定できる
           });
 
-          $('.memorialPhotoList.left').slick({
+          $('.slidePhotoList.right').slick({
             autoplay: true,
             autoplaySpeed: 0,
             speed: 8000,
@@ -68,11 +68,12 @@ require_once("header.php"); ?>
             pauseOnHover: false,
             centerMode: true,
             variableWidth: true,
+            rtl: true, // 逆方向 HTMLにも記述必要
           });
         });
       </script>
 
-      <div class="memorial__photoBox">
+      <!-- <div class="memorial__photoBox">
         <div class="l-pd0 memorial__photoInner">
           <ul class="memorialPhotoList left">
             <li class="memorialPhotoList__item"><img src="/assets/img/top/img_memorial-photo01-01.jpg" alt="" class="memorialPhotoList__img"></li>
@@ -87,6 +88,45 @@ require_once("header.php"); ?>
             <li class="memorialPhotoList__item"><img src="/assets/img/top/img_memorial-photo02-03.jpg" alt="" class="memorialPhotoList__img"></li>
             <li class="memorialPhotoList__item"><img src="/assets/img/top/img_memorial-photo02-04.jpg" alt="" class="memorialPhotoList__img"></li>
             <li class="memorialPhotoList__item"><img src="/assets/img/top/img_memorial-photo02-05.jpg" alt="" class="memorialPhotoList__img"></li>
+          </ul>
+        </div>
+      </div> -->
+
+      <div class="slidePhotoBox">
+        <div class="l-pd0 slidePhotoInner">
+          <ul class="slidePhotoList left">
+            <li class="slidePhotoList__item">
+              <img src="/assets/img/top/img_memorial-photo01-01.jpg" alt="" class="slidePhotoList__img">
+            </li>
+            <li class="slidePhotoList__item">
+              <img src="/assets/img/top/img_memorial-photo01-02.jpg" alt="" class="slidePhotoList__img">
+            </li>
+            <li class="slidePhotoList__item">
+              <img src="/assets/img/top/img_memorial-photo01-03.jpg" alt="" class="slidePhotoList__img">
+            </li>
+            <li class="slidePhotoList__item">
+              <img src="/assets/img/top/img_memorial-photo01-04.jpg" alt="" class="slidePhotoList__img">
+            </li>
+            <li class="slidePhotoList__item">
+              <img src="/assets/img/top/img_memorial-photo01-05.jpg" alt="" class="slidePhotoList__img">
+            </li>
+          </ul>
+          <ul class="slidePhotoList right" dir="rtl">
+            <li class="slidePhotoList__item">
+              <img src="/assets/img/top/img_memorial-photo02-01.jpg" alt="" class="slidePhotoList__img">
+            </li>
+            <li class="slidePhotoList__item">
+              <img src="/assets/img/top/img_memorial-photo02-02.jpg" alt="" class="slidePhotoList__img">
+            </li>
+            <li class="slidePhotoList__item">
+              <img src="/assets/img/top/img_memorial-photo02-03.jpg" alt="" class="slidePhotoList__img">
+            </li>
+            <li class="slidePhotoList__item">
+              <img src="/assets/img/top/img_memorial-photo02-04.jpg" alt="" class="slidePhotoList__img">
+            </li>
+            <li class="slidePhotoList__item">
+              <img src="/assets/img/top/img_memorial-photo02-05.jpg" alt="" class="slidePhotoList__img">
+            </li>
           </ul>
         </div>
       </div>

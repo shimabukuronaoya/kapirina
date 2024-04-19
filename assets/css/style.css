@@ -1536,6 +1536,7 @@ textarea {
   }
   .headerMenuSp {
     z-index: 100;
+    display: block;
   }
   .headerMenuSp.close {
     top: 17px;
@@ -1581,6 +1582,7 @@ textarea {
   }
   .is-open {
     display: block;
+    transition: 0.3s;
   }
 }
 .footer {
@@ -2414,25 +2416,21 @@ textarea {
   bottom: 0;
 }
 
-.memorial__photoBox {
+.slidePhotoBox {
   width: 100%;
   margin-bottom: 110px;
 }
 
-.memorial__photoInner {
-  overflow: hidden;
-}
-
-.memorialPhotoList + .memorialPhotoList {
+.slidePhotoList + .slidePhotoList {
   margin-top: 40px;
 }
 
-.memorialPhotoList__item {
+.slidePhotoList__item {
   width: 223px;
   margin: 0 20px;
 }
 
-.memorialPhotoList__img {
+.slidePhotoList__img {
   border-radius: 15px;
 }
 
@@ -2605,22 +2603,19 @@ textarea {
     top: auto;
     bottom: 0;
   }
-  .memorial__photoBox {
+  .slidePhotoBox {
     width: 100%;
     margin-bottom: 50px;
   }
-  .memorial__photoInner {
-    overflow: hidden;
-  }
-  .memorialPhotoList + .memorialPhotoList {
+  .slidePhotoList + .slidePhotoList {
     margin-top: 20px;
   }
-  .memorialPhotoList__item {
+  .slidePhotoList__item {
     width: 160px;
     margin: 0 10px;
   }
-  .memorialPhotoList__img {
-    border-radius: 12px;
+  .slidePhotoList__img {
+    border-radius: 10px;
   }
   .memorialCampaignArea {
     width: auto;
