@@ -1483,6 +1483,8 @@ textarea {
     left: 0;
     height: 62px;
     align-items: center;
+    z-index: 100;
+    background-color: white;
   }
   .headerLogoSp {
     display: block;

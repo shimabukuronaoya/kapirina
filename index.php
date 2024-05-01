@@ -44,12 +44,12 @@ require_once("header.php"); ?>
       <script>
         jQuery(function($) {
           $('.slidePhotoList.left').slick({
-            autoplay: true, // 自動でスクロール
+            autoplay: false, // 自動でスクロール
             autoplaySpeed: 0, // 自動再生のスライドが切り替わってから次に動き出すまでの時間
-            speed: 8000, // スライド切り替えの時間
+            speed: 800, // スライド切り替えの時間
             cssEase: "linear", // スライドの流れ方を等速に設定
-            swipe: false, // 操作による切り替えはさせない
-            arrows: false, // 矢印非表示
+            swipe: true, // 操作による切り替えはさせない
+            arrows: true, // 矢印非表示
             pauseOnFocus: false, // スライダーをフォーカスした時にスライドを停止させるか
             pauseOnHover: false, // スライダーにマウスホバーした時にスライドを停止させるか
             slidesToShow: 3, // 表示するスライドの枚数

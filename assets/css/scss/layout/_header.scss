@@ -334,6 +334,8 @@
 //   }
 // }
 
+
+
 .headerMenu__overlay{
   display: none;
   width: 100%;
@@ -628,6 +630,8 @@
         left: 0;
         height: 62px;
         align-items: center;
+        z-index: 100;
+        background-color: #FFFF;
       }
     
       .headerLogoSp {
